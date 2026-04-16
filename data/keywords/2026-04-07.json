@@ -1,0 +1,15 @@
+{
+  "date": "2026-04-07",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [],
+      "bigrams": [],
+      "total_messages": 0
+    },
+    "초보방": {
+      "unigrams": [],
+      "bigrams": [],
+      "total_messages": 0
+    }
+  }
+}

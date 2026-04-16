@@ -1,0 +1,1219 @@
+{
+  "date": "2026-04-08",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [
+        {
+          "term": "소스",
+          "count": 16
+        },
+        {
+          "term": "url",
+          "count": 13
+        },
+        {
+          "term": "가져온",
+          "count": 13
+        },
+        {
+          "term": "stars",
+          "count": 8
+        },
+        {
+          "term": "md",
+          "count": 7
+        },
+        {
+          "term": "autoresearch",
+          "count": 6
+        },
+        {
+          "term": "오픈클로",
+          "count": 5
+        },
+        {
+          "term": "모델",
+          "count": 5
+        },
+        {
+          "term": "패턴",
+          "count": 5
+        },
+        {
+          "term": "루프",
+          "count": 4
+        },
+        {
+          "term": "걸까",
+          "count": 4
+        },
+        {
+          "term": "텔레그램",
+          "count": 3
+        },
+        {
+          "term": "궁금합니",
+          "count": 3
+        },
+        {
+          "term": "젬마",
+          "count": 3
+        },
+        {
+          "term": "gemma4",
+          "count": 3
+        },
+        {
+          "term": "v6",
+          "count": 3
+        },
+        {
+          "term": "karpathy",
+          "count": 3
+        },
+        {
+          "term": "실험",
+          "count": 3
+        },
+        {
+          "term": "ai",
+          "count": 3
+        },
+        {
+          "term": "수정",
+          "count": 3
+        },
+        {
+          "term": "아니면",
+          "count": 3
+        },
+        {
+          "term": "파일",
+          "count": 3
+        },
+        {
+          "term": "frozen",
+          "count": 3
+        },
+        {
+          "term": "metric",
+          "count": 3
+        },
+        {
+          "term": "openclaw",
+          "count": 3
+        },
+        {
+          "term": "agent",
+          "count": 3
+        },
+        {
+          "term": "arxiv",
+          "count": 3
+        },
+        {
+          "term": "자체",
+          "count": 3
+        },
+        {
+          "term": "계속",
+          "count": 3
+        },
+        {
+          "term": "사양",
+          "count": 3
+        },
+        {
+          "term": "gpt",
+          "count": 3
+        },
+        {
+          "term": "그렇게",
+          "count": 3
+        },
+        {
+          "term": "앱은",
+          "count": 3
+        },
+        {
+          "term": "쓰시나",
+          "count": 2
+        },
+        {
+          "term": "슬랙",
+          "count": 2
+        },
+        {
+          "term": "llm",
+          "count": 2
+        },
+        {
+          "term": "연동",
+          "count": 2
+        },
+        {
+          "term": "똑같",
+          "count": 2
+        },
+        {
+          "term": "봇을",
+          "count": 2
+        },
+        {
+          "term": "되나",
+          "count": 2
+        },
+        {
+          "term": "옵시디언",
+          "count": 2
+        },
+        {
+          "term": "사용하시나",
+          "count": 2
+        },
+        {
+          "term": "하는데",
+          "count": 2
+        },
+        {
+          "term": "구현",
+          "count": 2
+        },
+        {
+          "term": "skill",
+          "count": 2
+        },
+        {
+          "term": "보고",
+          "count": 2
+        },
+        {
+          "term": "시스템",
+          "count": 2
+        },
+        {
+          "term": "코드",
+          "count": 2
+        },
+        {
+          "term": "측정",
+          "count": 2
+        },
+        {
+          "term": "에이전트",
+          "count": 2
+        },
+        {
+          "term": "three",
+          "count": 2
+        },
+        {
+          "term": "file",
+          "count": 2
+        },
+        {
+          "term": "git",
+          "count": 2
+        },
+        {
+          "term": "전략",
+          "count": 2
+        },
+        {
+          "term": "strategies",
+          "count": 2
+        },
+        {
+          "term": "system",
+          "count": 2
+        },
+        {
+          "term": "prompt",
+          "count": 2
+        },
+        {
+          "term": "learning",
+          "count": 2
+        },
+        {
+          "term": "전체",
+          "count": 2
+        },
+        {
+          "term": "keep",
+          "count": 2
+        },
+        {
+          "term": "security",
+          "count": 2
+        },
+        {
+          "term": "블로그",
+          "count": 2
+        },
+        {
+          "term": "논문",
+          "count": 2
+        },
+        {
+          "term": "반복",
+          "count": 2
+        },
+        {
+          "term": "self",
+          "count": 2
+        },
+        {
+          "term": "plateau",
+          "count": 2
+        },
+        {
+          "term": "감지",
+          "count": 2
+        },
+        {
+          "term": "dgm",
+          "count": 2
+        },
+        {
+          "term": "corpus",
+          "count": 2
+        },
+        {
+          "term": "radix",
+          "count": 2
+        },
+        {
+          "term": "이미지",
+          "count": 2
+        },
+        {
+          "term": "기존",
+          "count": 2
+        },
+        {
+          "term": "이게",
+          "count": 2
+        },
+        {
+          "term": "나오네",
+          "count": 2
+        },
+        {
+          "term": "어느정",
+          "count": 2
+        },
+        {
+          "term": "올려주신",
+          "count": 2
+        },
+        {
+          "term": "협업",
+          "count": 2
+        },
+        {
+          "term": "해줘",
+          "count": 2
+        },
+        {
+          "term": "참고할",
+          "count": 2
+        },
+        {
+          "term": "만들어",
+          "count": 2
+        },
+        {
+          "term": "스토어에",
+          "count": 2
+        },
+        {
+          "term": "활용",
+          "count": 2
+        },
+        {
+          "term": "어케",
+          "count": 2
+        },
+        {
+          "term": "성능",
+          "count": 2
+        },
+        {
+          "term": "영상",
+          "count": 2
+        },
+        {
+          "term": "젬마4",
+          "count": 2
+        },
+        {
+          "term": "이건",
+          "count": 2
+        },
+        {
+          "term": "우와",
+          "count": 2
+        },
+        {
+          "term": "궁금하네",
+          "count": 2
+        },
+        {
+          "term": "가족",
+          "count": 2
+        },
+        {
+          "term": "사용할",
+          "count": 2
+        },
+        {
+          "term": "어떤게",
+          "count": 2
+        },
+        {
+          "term": "ios",
+          "count": 2
+        },
+        {
+          "term": "배포하시나",
+          "count": 2
+        },
+        {
+          "term": "테스트플라이트나",
+          "count": 2
+        },
+        {
+          "term": "apk로",
+          "count": 2
+        },
+        {
+          "term": "배포하시나여",
+          "count": 2
+        },
+        {
+          "term": "코딩",
+          "count": 2
+        },
+        {
+          "term": "미니맥스",
+          "count": 2
+        },
+        {
+          "term": "장애",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "stars 가져온",
+          "count": 7
+        },
+        {
+          "term": "url stars",
+          "count": 6
+        },
+        {
+          "term": "autoresearch url",
+          "count": 4
+        },
+        {
+          "term": "frozen metric",
+          "count": 3
+        },
+        {
+          "term": "url 가져온",
+          "count": 3
+        },
+        {
+          "term": "karpathy autoresearch",
+          "count": 2
+        },
+        {
+          "term": "three file",
+          "count": 2
+        },
+        {
+          "term": "system prompt",
+          "count": 2
+        },
+        {
+          "term": "prompt learning",
+          "count": 2
+        },
+        {
+          "term": "소스 karpathy",
+          "count": 2
+        },
+        {
+          "term": "논문 url",
+          "count": 2
+        },
+        {
+          "term": "md 파일",
+          "count": 2
+        },
+        {
+          "term": "가족 사용할",
+          "count": 2
+        },
+        {
+          "term": "사용할 앱은",
+          "count": 2
+        },
+        {
+          "term": "앱은 어떤게",
+          "count": 2
+        },
+        {
+          "term": "아니면 테스트플라이트나",
+          "count": 2
+        },
+        {
+          "term": "테스트플라이트나 apk로",
+          "count": 2
+        },
+        {
+          "term": "apk로 배포하시나여",
+          "count": 2
+        },
+        {
+          "term": "텔레그램 장애",
+          "count": 1
+        },
+        {
+          "term": "장애 났나용",
+          "count": 1
+        },
+        {
+          "term": "ssd 추가",
+          "count": 1
+        },
+        {
+          "term": "추가 장착해",
+          "count": 1
+        },
+        {
+          "term": "장착해 어려운가",
+          "count": 1
+        },
+        {
+          "term": "역시 당근에",
+          "count": 1
+        },
+        {
+          "term": "당근에 있길래",
+          "count": 1
+        },
+        {
+          "term": "있길래 고민되더라고",
+          "count": 1
+        },
+        {
+          "term": "맥미 쓰시는분들",
+          "count": 1
+        },
+        {
+          "term": "쓰시는분들 용량",
+          "count": 1
+        },
+        {
+          "term": "용량 작은거",
+          "count": 1
+        },
+        {
+          "term": "작은거 드라이브같은거",
+          "count": 1
+        },
+        {
+          "term": "드라이브같은거 연결해",
+          "count": 1
+        },
+        {
+          "term": "연결해 쓰시나",
+          "count": 1
+        },
+        {
+          "term": "여러분 정상인가",
+          "count": 1
+        },
+        {
+          "term": "ai쓸 영어로",
+          "count": 1
+        },
+        {
+          "term": "영어로 쓰시",
+          "count": 1
+        },
+        {
+          "term": "쓰시 분도",
+          "count": 1
+        },
+        {
+          "term": "슬랙 github",
+          "count": 1
+        },
+        {
+          "term": "github 노션",
+          "count": 1
+        },
+        {
+          "term": "노션 데이터베이스",
+          "count": 1
+        },
+        {
+          "term": "데이터베이스 읽도록",
+          "count": 1
+        },
+        {
+          "term": "읽도록 llm",
+          "count": 1
+        },
+        {
+          "term": "llm 연동",
+          "count": 1
+        },
+        {
+          "term": "연동 가능한지",
+          "count": 1
+        },
+        {
+          "term": "가능한지 궁금합니",
+          "count": 1
+        },
+        {
+          "term": "궁금합니 오픈클로",
+          "count": 1
+        },
+        {
+          "term": "오픈클로 아니여",
+          "count": 1
+        },
+        {
+          "term": "아니여 가능할까",
+          "count": 1
+        },
+        {
+          "term": "가능할까 최소",
+          "count": 1
+        },
+        {
+          "term": "최소 가격",
+          "count": 1
+        },
+        {
+          "term": "가격 테스트",
+          "count": 1
+        }
+      ],
+      "total_messages": 77
+    },
+    "초보방": {
+      "unigrams": [
+        {
+          "term": "말풍선",
+          "count": 6
+        },
+        {
+          "term": "오픈클로",
+          "count": 5
+        },
+        {
+          "term": "우디",
+          "count": 5
+        },
+        {
+          "term": "gpt",
+          "count": 4
+        },
+        {
+          "term": "모델",
+          "count": 3
+        },
+        {
+          "term": "내용",
+          "count": 3
+        },
+        {
+          "term": "openclaw",
+          "count": 3
+        },
+        {
+          "term": "다들",
+          "count": 3
+        },
+        {
+          "term": "텔레그램",
+          "count": 2
+        },
+        {
+          "term": "새로",
+          "count": 2
+        },
+        {
+          "term": "여러개",
+          "count": 2
+        },
+        {
+          "term": "하트비트",
+          "count": 2
+        },
+        {
+          "term": "드리밍",
+          "count": 2
+        },
+        {
+          "term": "api",
+          "count": 2
+        },
+        {
+          "term": "뉴스",
+          "count": 2
+        },
+        {
+          "term": "방법",
+          "count": 2
+        },
+        {
+          "term": "주거나",
+          "count": 2
+        },
+        {
+          "term": "이게",
+          "count": 2
+        },
+        {
+          "term": "소울md",
+          "count": 2
+        },
+        {
+          "term": "쓰시나",
+          "count": 2
+        },
+        {
+          "term": "애들",
+          "count": 2
+        },
+        {
+          "term": "날짜별",
+          "count": 2
+        },
+        {
+          "term": "메모리",
+          "count": 2
+        },
+        {
+          "term": "나오네",
+          "count": 2
+        },
+        {
+          "term": "말투",
+          "count": 2
+        },
+        {
+          "term": "클로드",
+          "count": 2
+        },
+        {
+          "term": "실제",
+          "count": 2
+        },
+        {
+          "term": "소리",
+          "count": 2
+        },
+        {
+          "term": "반쪽하트",
+          "count": 2
+        },
+        {
+          "term": "빙글빙글",
+          "count": 2
+        },
+        {
+          "term": "헤헤",
+          "count": 2
+        },
+        {
+          "term": "저를",
+          "count": 2
+        },
+        {
+          "term": "수정",
+          "count": 2
+        },
+        {
+          "term": "알알",
+          "count": 2
+        },
+        {
+          "term": "하는데",
+          "count": 2
+        },
+        {
+          "term": "플러스",
+          "count": 2
+        },
+        {
+          "term": "이름",
+          "count": 2
+        },
+        {
+          "term": "먼저",
+          "count": 2
+        },
+        {
+          "term": "장애났나용",
+          "count": 1
+        },
+        {
+          "term": "dreaming",
+          "count": 1
+        },
+        {
+          "term": "폴더",
+          "count": 1
+        },
+        {
+          "term": "만들어줬던데",
+          "count": 1
+        },
+        {
+          "term": "그거일까",
+          "count": 1
+        },
+        {
+          "term": "아뇨",
+          "count": 1
+        },
+        {
+          "term": "돌리시는분",
+          "count": 1
+        },
+        {
+          "term": "많습니",
+          "count": 1
+        },
+        {
+          "term": "다만",
+          "count": 1
+        },
+        {
+          "term": "쓰면",
+          "count": 1
+        },
+        {
+          "term": "그만큼",
+          "count": 1
+        },
+        {
+          "term": "토큰",
+          "count": 1
+        },
+        {
+          "term": "녹아내리",
+          "count": 1
+        },
+        {
+          "term": "속도",
+          "count": 1
+        },
+        {
+          "term": "8월",
+          "count": 1
+        },
+        {
+          "term": "에어컨없",
+          "count": 1
+        },
+        {
+          "term": "비닐하우스에",
+          "count": 1
+        },
+        {
+          "term": "놓아둔",
+          "count": 1
+        },
+        {
+          "term": "얼음",
+          "count": 1
+        },
+        {
+          "term": "사라지",
+          "count": 1
+        },
+        {
+          "term": "사소한",
+          "count": 1
+        },
+        {
+          "term": "문제",
+          "count": 1
+        },
+        {
+          "term": "있기",
+          "count": 1
+        },
+        {
+          "term": "할거에",
+          "count": 1
+        },
+        {
+          "term": "켰는데",
+          "count": 1
+        },
+        {
+          "term": "기대중입니",
+          "count": 1
+        },
+        {
+          "term": "내일쯤",
+          "count": 1
+        },
+        {
+          "term": "잘되",
+          "count": 1
+        },
+        {
+          "term": "있나보려구",
+          "count": 1
+        },
+        {
+          "term": "토큰때문에",
+          "count": 1
+        },
+        {
+          "term": "잠시꺼뒀",
+          "count": 1
+        },
+        {
+          "term": "켜면",
+          "count": 1
+        },
+        {
+          "term": "켜집니",
+          "count": 1
+        },
+        {
+          "term": "스킬인가",
+          "count": 1
+        },
+        {
+          "term": "늦었군",
+          "count": 1
+        },
+        {
+          "term": "16으로",
+          "count": 1
+        },
+        {
+          "term": "클로드같",
+          "count": 1
+        },
+        {
+          "term": "외부llm쓰면",
+          "count": 1
+        },
+        {
+          "term": "한개",
+          "count": 1
+        },
+        {
+          "term": "정도",
+          "count": 1
+        },
+        {
+          "term": "돌릴수있나욤",
+          "count": 1
+        },
+        {
+          "term": "설치",
+          "count": 1
+        },
+        {
+          "term": "폴더경로",
+          "count": 1
+        },
+        {
+          "term": "열어야할까",
+          "count": 1
+        },
+        {
+          "term": "파워셀로",
+          "count": 1
+        },
+        {
+          "term": "설치중",
+          "count": 1
+        },
+        {
+          "term": "설중",
+          "count": 1
+        },
+        {
+          "term": "다은단계",
+          "count": 1
+        },
+        {
+          "term": "경로",
+          "count": 1
+        },
+        {
+          "term": "관련",
+          "count": 1
+        },
+        {
+          "term": "오류같은게",
+          "count": 1
+        },
+        {
+          "term": "뜨는데",
+          "count": 1
+        },
+        {
+          "term": "때문에",
+          "count": 1
+        },
+        {
+          "term": "그럴까용",
+          "count": 1
+        },
+        {
+          "term": "개발자",
+          "count": 1
+        },
+        {
+          "term": "아니라",
+          "count": 1
+        },
+        {
+          "term": "말씀드리기",
+          "count": 1
+        },
+        {
+          "term": "조심스럽지",
+          "count": 1
+        },
+        {
+          "term": "네이버",
+          "count": 1
+        },
+        {
+          "term": "같은거",
+          "count": 1
+        },
+        {
+          "term": "가져와",
+          "count": 1
+        },
+        {
+          "term": "안될까",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "말풍선 헤헤",
+          "count": 2
+        },
+        {
+          "term": "텔레그램 장애났나용",
+          "count": 1
+        },
+        {
+          "term": "dreaming 폴더",
+          "count": 1
+        },
+        {
+          "term": "폴더 새로",
+          "count": 1
+        },
+        {
+          "term": "새로 만들어줬던데",
+          "count": 1
+        },
+        {
+          "term": "만들어줬던데 그거일까",
+          "count": 1
+        },
+        {
+          "term": "아뇨 여러개",
+          "count": 1
+        },
+        {
+          "term": "여러개 돌리시는분",
+          "count": 1
+        },
+        {
+          "term": "돌리시는분 많습니",
+          "count": 1
+        },
+        {
+          "term": "많습니 다만",
+          "count": 1
+        },
+        {
+          "term": "다만 여러개",
+          "count": 1
+        },
+        {
+          "term": "여러개 쓰면",
+          "count": 1
+        },
+        {
+          "term": "쓰면 그만큼",
+          "count": 1
+        },
+        {
+          "term": "그만큼 토큰",
+          "count": 1
+        },
+        {
+          "term": "토큰 녹아내리",
+          "count": 1
+        },
+        {
+          "term": "녹아내리 속도",
+          "count": 1
+        },
+        {
+          "term": "속도 8월",
+          "count": 1
+        },
+        {
+          "term": "8월 에어컨없",
+          "count": 1
+        },
+        {
+          "term": "에어컨없 비닐하우스에",
+          "count": 1
+        },
+        {
+          "term": "비닐하우스에 놓아둔",
+          "count": 1
+        },
+        {
+          "term": "놓아둔 얼음",
+          "count": 1
+        },
+        {
+          "term": "얼음 사라지",
+          "count": 1
+        },
+        {
+          "term": "사라지 사소한",
+          "count": 1
+        },
+        {
+          "term": "사소한 문제",
+          "count": 1
+        },
+        {
+          "term": "문제 있기",
+          "count": 1
+        },
+        {
+          "term": "있기 할거에",
+          "count": 1
+        },
+        {
+          "term": "켰는데 기대중입니",
+          "count": 1
+        },
+        {
+          "term": "기대중입니 내일쯤",
+          "count": 1
+        },
+        {
+          "term": "내일쯤 잘되",
+          "count": 1
+        },
+        {
+          "term": "잘되 있나보려구",
+          "count": 1
+        },
+        {
+          "term": "있나보려구 토큰때문에",
+          "count": 1
+        },
+        {
+          "term": "토큰때문에 하트비트",
+          "count": 1
+        },
+        {
+          "term": "하트비트 잠시꺼뒀",
+          "count": 1
+        },
+        {
+          "term": "잠시꺼뒀 드리밍",
+          "count": 1
+        },
+        {
+          "term": "드리밍 켜면",
+          "count": 1
+        },
+        {
+          "term": "켜면 하트비트",
+          "count": 1
+        },
+        {
+          "term": "하트비트 켜집니",
+          "count": 1
+        },
+        {
+          "term": "드리밍 스킬인가",
+          "count": 1
+        },
+        {
+          "term": "늦었군 16으로",
+          "count": 1
+        },
+        {
+          "term": "16으로 클로드같",
+          "count": 1
+        },
+        {
+          "term": "클로드같 외부llm쓰면",
+          "count": 1
+        },
+        {
+          "term": "외부llm쓰면 한개",
+          "count": 1
+        },
+        {
+          "term": "한개 정도",
+          "count": 1
+        },
+        {
+          "term": "정도 돌릴수있나욤",
+          "count": 1
+        },
+        {
+          "term": "설치 폴더경로",
+          "count": 1
+        },
+        {
+          "term": "폴더경로 열어야할까",
+          "count": 1
+        },
+        {
+          "term": "파워셀로 오픈클로",
+          "count": 1
+        },
+        {
+          "term": "오픈클로 설치중",
+          "count": 1
+        },
+        {
+          "term": "설치중 api",
+          "count": 1
+        },
+        {
+          "term": "api 설중",
+          "count": 1
+        }
+      ],
+      "total_messages": 40
+    }
+  }
+}

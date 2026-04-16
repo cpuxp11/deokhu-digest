@@ -1,0 +1,1163 @@
+{
+  "date": "2026-04-16",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [
+        {
+          "term": "acp",
+          "count": 3
+        },
+        {
+          "term": "background",
+          "count": 2
+        },
+        {
+          "term": "task",
+          "count": 2
+        },
+        {
+          "term": "acp로",
+          "count": 2
+        },
+        {
+          "term": "스킬",
+          "count": 2
+        },
+        {
+          "term": "어떤게",
+          "count": 2
+        },
+        {
+          "term": "감사합니",
+          "count": 1
+        },
+        {
+          "term": "궁금한게",
+          "count": 1
+        },
+        {
+          "term": "로컬에",
+          "count": 1
+        },
+        {
+          "term": "저장",
+          "count": 1
+        },
+        {
+          "term": "해놓",
+          "count": 1
+        },
+        {
+          "term": "복구",
+          "count": 1
+        },
+        {
+          "term": "시켜",
+          "count": 1
+        },
+        {
+          "term": "외부에",
+          "count": 1
+        },
+        {
+          "term": "연공되있지",
+          "count": 1
+        },
+        {
+          "term": "않은게",
+          "count": 1
+        },
+        {
+          "term": "유출이되나",
+          "count": 1
+        },
+        {
+          "term": "오픈라우터",
+          "count": 1
+        },
+        {
+          "term": "쓰면",
+          "count": 1
+        },
+        {
+          "term": "토큰",
+          "count": 1
+        },
+        {
+          "term": "눈녹듯",
+          "count": 1
+        },
+        {
+          "term": "녹앙",
+          "count": 1
+        },
+        {
+          "term": "done",
+          "count": 1
+        },
+        {
+          "term": "run",
+          "count": 1
+        },
+        {
+          "term": "얘는",
+          "count": 1
+        },
+        {
+          "term": "계속",
+          "count": 1
+        },
+        {
+          "term": "이런걸",
+          "count": 1
+        },
+        {
+          "term": "반복할까",
+          "count": 1
+        },
+        {
+          "term": "걸다",
+          "count": 1
+        },
+        {
+          "term": "안걸린거같",
+          "count": 1
+        },
+        {
+          "term": "돌았다",
+          "count": 1
+        },
+        {
+          "term": "메시지입니",
+          "count": 1
+        },
+        {
+          "term": "정상",
+          "count": 1
+        },
+        {
+          "term": "노티에",
+          "count": 1
+        },
+        {
+          "term": "지극히정상이",
+          "count": 1
+        },
+        {
+          "term": "잘했다는뜻이구",
+          "count": 1
+        },
+        {
+          "term": "저게",
+          "count": 1
+        },
+        {
+          "term": "없으면",
+          "count": 1
+        },
+        {
+          "term": "불안해",
+          "count": 1
+        },
+        {
+          "term": "acp안썼을까바",
+          "count": 1
+        },
+        {
+          "term": "보기",
+          "count": 1
+        },
+        {
+          "term": "싫어",
+          "count": 1
+        },
+        {
+          "term": "없애달라니까",
+          "count": 1
+        },
+        {
+          "term": "절대",
+          "count": 1
+        },
+        {
+          "term": "안해주던데",
+          "count": 1
+        },
+        {
+          "term": "처음",
+          "count": 1
+        },
+        {
+          "term": "연결한",
+          "count": 1
+        },
+        {
+          "term": "날은",
+          "count": 1
+        },
+        {
+          "term": "안나왔던터라",
+          "count": 1
+        },
+        {
+          "term": "그리",
+          "count": 1
+        },
+        {
+          "term": "연결하면",
+          "count": 1
+        },
+        {
+          "term": "애가",
+          "count": 1
+        },
+        {
+          "term": "말투",
+          "count": 1
+        },
+        {
+          "term": "행동",
+          "count": 1
+        },
+        {
+          "term": "달라져",
+          "count": 1
+        },
+        {
+          "term": "힘드네",
+          "count": 1
+        },
+        {
+          "term": "지피티",
+          "count": 1
+        },
+        {
+          "term": "갔다와서그런",
+          "count": 1
+        },
+        {
+          "term": "웨비나",
+          "count": 1
+        },
+        {
+          "term": "자료",
+          "count": 1
+        },
+        {
+          "term": "받으면",
+          "count": 1
+        },
+        {
+          "term": "열심히",
+          "count": 1
+        },
+        {
+          "term": "셋팅해보겠습니",
+          "count": 1
+        },
+        {
+          "term": "skills",
+          "count": 1
+        },
+        {
+          "term": "기차표",
+          "count": 1
+        },
+        {
+          "term": "빼서",
+          "count": 1
+        },
+        {
+          "term": "따로",
+          "count": 1
+        },
+        {
+          "term": "스킬로",
+          "count": 1
+        },
+        {
+          "term": "등록한",
+          "count": 1
+        },
+        {
+          "term": "다들",
+          "count": 1
+        },
+        {
+          "term": "엄청",
+          "count": 1
+        },
+        {
+          "term": "유용하게",
+          "count": 1
+        },
+        {
+          "term": "쓴다",
+          "count": 1
+        },
+        {
+          "term": "skill",
+          "count": 1
+        },
+        {
+          "term": "들여다",
+          "count": 1
+        },
+        {
+          "term": "봤는데",
+          "count": 1
+        },
+        {
+          "term": "저랑",
+          "count": 1
+        },
+        {
+          "term": "상관없어",
+          "count": 1
+        },
+        {
+          "term": "보이는게",
+          "count": 1
+        },
+        {
+          "term": "많아",
+          "count": 1
+        },
+        {
+          "term": "유용한지",
+          "count": 1
+        },
+        {
+          "term": "사례",
+          "count": 1
+        },
+        {
+          "term": "모르니까",
+          "count": 1
+        },
+        {
+          "term": "검색해",
+          "count": 1
+        },
+        {
+          "term": "찾아보는것",
+          "count": 1
+        },
+        {
+          "term": "못하겠네",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "background task",
+          "count": 2
+        },
+        {
+          "term": "감사합니 궁금한게",
+          "count": 1
+        },
+        {
+          "term": "궁금한게 로컬에",
+          "count": 1
+        },
+        {
+          "term": "로컬에 저장",
+          "count": 1
+        },
+        {
+          "term": "저장 해놓",
+          "count": 1
+        },
+        {
+          "term": "해놓 복구",
+          "count": 1
+        },
+        {
+          "term": "복구 시켜",
+          "count": 1
+        },
+        {
+          "term": "시켜 외부에",
+          "count": 1
+        },
+        {
+          "term": "외부에 연공되있지",
+          "count": 1
+        },
+        {
+          "term": "연공되있지 않은게",
+          "count": 1
+        },
+        {
+          "term": "않은게 유출이되나",
+          "count": 1
+        },
+        {
+          "term": "오픈라우터 쓰면",
+          "count": 1
+        },
+        {
+          "term": "쓰면 토큰",
+          "count": 1
+        },
+        {
+          "term": "토큰 눈녹듯",
+          "count": 1
+        },
+        {
+          "term": "눈녹듯 녹앙",
+          "count": 1
+        },
+        {
+          "term": "task done",
+          "count": 1
+        },
+        {
+          "term": "done acp",
+          "count": 1
+        },
+        {
+          "term": "acp background",
+          "count": 1
+        },
+        {
+          "term": "task run",
+          "count": 1
+        },
+        {
+          "term": "run 얘는",
+          "count": 1
+        },
+        {
+          "term": "얘는 계속",
+          "count": 1
+        },
+        {
+          "term": "계속 이런걸",
+          "count": 1
+        },
+        {
+          "term": "이런걸 반복할까",
+          "count": 1
+        },
+        {
+          "term": "반복할까 acp",
+          "count": 1
+        },
+        {
+          "term": "acp 걸다",
+          "count": 1
+        },
+        {
+          "term": "걸다 안걸린거같",
+          "count": 1
+        },
+        {
+          "term": "acp로 돌았다",
+          "count": 1
+        },
+        {
+          "term": "돌았다 메시지입니",
+          "count": 1
+        },
+        {
+          "term": "메시지입니 정상",
+          "count": 1
+        },
+        {
+          "term": "정상 노티에",
+          "count": 1
+        },
+        {
+          "term": "지극히정상이 acp로",
+          "count": 1
+        },
+        {
+          "term": "acp로 잘했다는뜻이구",
+          "count": 1
+        },
+        {
+          "term": "잘했다는뜻이구 저게",
+          "count": 1
+        },
+        {
+          "term": "저게 없으면",
+          "count": 1
+        },
+        {
+          "term": "없으면 불안해",
+          "count": 1
+        },
+        {
+          "term": "불안해 acp안썼을까바",
+          "count": 1
+        },
+        {
+          "term": "보기 싫어",
+          "count": 1
+        },
+        {
+          "term": "싫어 없애달라니까",
+          "count": 1
+        },
+        {
+          "term": "없애달라니까 절대",
+          "count": 1
+        },
+        {
+          "term": "절대 안해주던데",
+          "count": 1
+        },
+        {
+          "term": "안해주던데 처음",
+          "count": 1
+        },
+        {
+          "term": "처음 연결한",
+          "count": 1
+        },
+        {
+          "term": "연결한 날은",
+          "count": 1
+        },
+        {
+          "term": "날은 안나왔던터라",
+          "count": 1
+        },
+        {
+          "term": "그리 acp",
+          "count": 1
+        },
+        {
+          "term": "acp 연결하면",
+          "count": 1
+        },
+        {
+          "term": "연결하면 애가",
+          "count": 1
+        },
+        {
+          "term": "애가 말투",
+          "count": 1
+        },
+        {
+          "term": "말투 행동",
+          "count": 1
+        },
+        {
+          "term": "행동 달라져",
+          "count": 1
+        }
+      ],
+      "total_messages": 10
+    },
+    "초보방": {
+      "unigrams": [
+        {
+          "term": "미토스",
+          "count": 7
+        },
+        {
+          "term": "오푸스",
+          "count": 5
+        },
+        {
+          "term": "구독",
+          "count": 4
+        },
+        {
+          "term": "제미나",
+          "count": 4
+        },
+        {
+          "term": "삽질",
+          "count": 4
+        },
+        {
+          "term": "클로드",
+          "count": 3
+        },
+        {
+          "term": "쥐피티",
+          "count": 3
+        },
+        {
+          "term": "gpt",
+          "count": 3
+        },
+        {
+          "term": "셋팅",
+          "count": 3
+        },
+        {
+          "term": "오지게",
+          "count": 3
+        },
+        {
+          "term": "비쌀거같",
+          "count": 3
+        },
+        {
+          "term": "이유",
+          "count": 3
+        },
+        {
+          "term": "나오면",
+          "count": 3
+        },
+        {
+          "term": "천국",
+          "count": 3
+        },
+        {
+          "term": "하루만에",
+          "count": 3
+        },
+        {
+          "term": "나의",
+          "count": 3
+        },
+        {
+          "term": "어디에",
+          "count": 3
+        },
+        {
+          "term": "써야할지",
+          "count": 3
+        },
+        {
+          "term": "봇을",
+          "count": 3
+        },
+        {
+          "term": "우회",
+          "count": 2
+        },
+        {
+          "term": "아니구",
+          "count": 2
+        },
+        {
+          "term": "봇이",
+          "count": 2
+        },
+        {
+          "term": "방법",
+          "count": 2
+        },
+        {
+          "term": "고클로",
+          "count": 2
+        },
+        {
+          "term": "오픈클로",
+          "count": 2
+        },
+        {
+          "term": "뽀짝",
+          "count": 2
+        },
+        {
+          "term": "모델",
+          "count": 2
+        },
+        {
+          "term": "얼마짜리",
+          "count": 2
+        },
+        {
+          "term": "추천하시나",
+          "count": 2
+        },
+        {
+          "term": "동료분",
+          "count": 2
+        },
+        {
+          "term": "위주로",
+          "count": 2
+        },
+        {
+          "term": "쓰시다",
+          "count": 2
+        },
+        {
+          "term": "맛을",
+          "count": 2
+        },
+        {
+          "term": "이번에",
+          "count": 2
+        },
+        {
+          "term": "처음",
+          "count": 2
+        },
+        {
+          "term": "보셨",
+          "count": 2
+        },
+        {
+          "term": "소넷",
+          "count": 2
+        },
+        {
+          "term": "썼는데",
+          "count": 2
+        },
+        {
+          "term": "맘에",
+          "count": 2
+        },
+        {
+          "term": "들어하심",
+          "count": 2
+        },
+        {
+          "term": "자주",
+          "count": 2
+        },
+        {
+          "term": "뻗는거랑",
+          "count": 2
+        },
+        {
+          "term": "토큰",
+          "count": 2
+        },
+        {
+          "term": "활활타는거",
+          "count": 2
+        },
+        {
+          "term": "어떻게좀",
+          "count": 2
+        },
+        {
+          "term": "로컬모델",
+          "count": 2
+        },
+        {
+          "term": "개인적인",
+          "count": 2
+        },
+        {
+          "term": "거의끝났으면",
+          "count": 2
+        },
+        {
+          "term": "게임오버",
+          "count": 2
+        },
+        {
+          "term": "없고",
+          "count": 2
+        },
+        {
+          "term": "쓰고",
+          "count": 2
+        },
+        {
+          "term": "맛보면",
+          "count": 2
+        },
+        {
+          "term": "될듯한데",
+          "count": 2
+        },
+        {
+          "term": "그렇습니",
+          "count": 2
+        },
+        {
+          "term": "한달",
+          "count": 2
+        },
+        {
+          "term": "양이",
+          "count": 2
+        },
+        {
+          "term": "해결된다면",
+          "count": 2
+        },
+        {
+          "term": "하긴",
+          "count": 2
+        },
+        {
+          "term": "첨에",
+          "count": 2
+        },
+        {
+          "term": "지피티",
+          "count": 2
+        },
+        {
+          "term": "30만원짜리",
+          "count": 2
+        },
+        {
+          "term": "나왓늘때",
+          "count": 2
+        },
+        {
+          "term": "충격이엇",
+          "count": 2
+        },
+        {
+          "term": "회사",
+          "count": 2
+        },
+        {
+          "term": "무엇일까",
+          "count": 2
+        },
+        {
+          "term": "경험잇",
+          "count": 2
+        },
+        {
+          "term": "분들",
+          "count": 2
+        },
+        {
+          "term": "오히려",
+          "count": 2
+        },
+        {
+          "term": "해결해야할지",
+          "count": 2
+        },
+        {
+          "term": "병목",
+          "count": 2
+        },
+        {
+          "term": "어딘지",
+          "count": 2
+        },
+        {
+          "term": "두고",
+          "count": 2
+        },
+        {
+          "term": "개인",
+          "count": 2
+        },
+        {
+          "term": "맞아",
+          "count": 1
+        },
+        {
+          "term": "막혀",
+          "count": 1
+        },
+        {
+          "term": "acp방식",
+          "count": 1
+        },
+        {
+          "term": "쓰는데",
+          "count": 1
+        },
+        {
+          "term": "요건",
+          "count": 1
+        },
+        {
+          "term": "터미널클코",
+          "count": 1
+        },
+        {
+          "term": "인간인",
+          "count": 1
+        },
+        {
+          "term": "내가",
+          "count": 1
+        },
+        {
+          "term": "켜준",
+          "count": 1
+        },
+        {
+          "term": "생각하심",
+          "count": 1
+        },
+        {
+          "term": "되어",
+          "count": 1
+        },
+        {
+          "term": "종량제",
+          "count": 1
+        },
+        {
+          "term": "말고",
+          "count": 1
+        },
+        {
+          "term": "쓰실거면",
+          "count": 1
+        },
+        {
+          "term": "코덱스",
+          "count": 1
+        },
+        {
+          "term": "나은",
+          "count": 1
+        },
+        {
+          "term": "입니",
+          "count": 1
+        },
+        {
+          "term": "그리",
+          "count": 1
+        },
+        {
+          "term": "클코구독",
+          "count": 1
+        },
+        {
+          "term": "연결",
+          "count": 1
+        },
+        {
+          "term": "안해봣지",
+          "count": 1
+        },
+        {
+          "term": "정기님",
+          "count": 1
+        },
+        {
+          "term": "말로",
+          "count": 1
+        },
+        {
+          "term": "나노클로",
+          "count": 1
+        },
+        {
+          "term": "아직된다",
+          "count": 1
+        },
+        {
+          "term": "하구",
+          "count": 1
+        },
+        {
+          "term": "acp",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "미토스 오지게",
+          "count": 3
+        },
+        {
+          "term": "오지게 비쌀거같",
+          "count": 3
+        },
+        {
+          "term": "어디에 써야할지",
+          "count": 3
+        },
+        {
+          "term": "쥐피티 얼마짜리",
+          "count": 2
+        },
+        {
+          "term": "얼마짜리 추천하시나",
+          "count": 2
+        },
+        {
+          "term": "동료분 제미나",
+          "count": 2
+        },
+        {
+          "term": "제미나 gpt",
+          "count": 2
+        },
+        {
+          "term": "gpt 위주로",
+          "count": 2
+        },
+        {
+          "term": "위주로 쓰시다",
+          "count": 2
+        },
+        {
+          "term": "쓰시다 클로드",
+          "count": 2
+        },
+        {
+          "term": "클로드 맛을",
+          "count": 2
+        },
+        {
+          "term": "맛을 이번에",
+          "count": 2
+        },
+        {
+          "term": "이번에 처음",
+          "count": 2
+        },
+        {
+          "term": "처음 보셨",
+          "count": 2
+        },
+        {
+          "term": "보셨 소넷",
+          "count": 2
+        },
+        {
+          "term": "소넷 썼는데",
+          "count": 2
+        },
+        {
+          "term": "썼는데 맘에",
+          "count": 2
+        },
+        {
+          "term": "맘에 들어하심",
+          "count": 2
+        },
+        {
+          "term": "들어하심 자주",
+          "count": 2
+        },
+        {
+          "term": "자주 뻗는거랑",
+          "count": 2
+        },
+        {
+          "term": "뻗는거랑 토큰",
+          "count": 2
+        },
+        {
+          "term": "토큰 활활타는거",
+          "count": 2
+        },
+        {
+          "term": "활활타는거 어떻게좀",
+          "count": 2
+        },
+        {
+          "term": "셋팅 거의끝났으면",
+          "count": 2
+        },
+        {
+          "term": "미토스 나오면",
+          "count": 2
+        },
+        {
+          "term": "나오면 게임오버",
+          "count": 2
+        },
+        {
+          "term": "게임오버 삽질",
+          "count": 2
+        },
+        {
+          "term": "삽질 없고",
+          "count": 2
+        },
+        {
+          "term": "없고 미토스",
+          "count": 2
+        },
+        {
+          "term": "미토스 쓰고",
+          "count": 2
+        },
+        {
+          "term": "쓰고 천국",
+          "count": 2
+        },
+        {
+          "term": "천국 맛보면",
+          "count": 2
+        },
+        {
+          "term": "맛보면 될듯한데",
+          "count": 2
+        },
+        {
+          "term": "하루만에 나의",
+          "count": 2
+        },
+        {
+          "term": "나의 한달",
+          "count": 2
+        },
+        {
+          "term": "한달 삽질",
+          "count": 2
+        },
+        {
+          "term": "삽질 양이",
+          "count": 2
+        },
+        {
+          "term": "양이 해결된다면",
+          "count": 2
+        },
+        {
+          "term": "하긴 첨에",
+          "count": 2
+        },
+        {
+          "term": "첨에 제미나",
+          "count": 2
+        },
+        {
+          "term": "제미나 지피티",
+          "count": 2
+        },
+        {
+          "term": "지피티 30만원짜리",
+          "count": 2
+        },
+        {
+          "term": "30만원짜리 나왓늘때",
+          "count": 2
+        },
+        {
+          "term": "나왓늘때 충격이엇",
+          "count": 2
+        },
+        {
+          "term": "이유 무엇일까",
+          "count": 2
+        },
+        {
+          "term": "경험잇 분들",
+          "count": 2
+        },
+        {
+          "term": "분들 오히려",
+          "count": 2
+        },
+        {
+          "term": "오히려 어디에",
+          "count": 2
+        },
+        {
+          "term": "써야할지 해결해야할지",
+          "count": 2
+        },
+        {
+          "term": "해결해야할지 병목",
+          "count": 2
+        }
+      ],
+      "total_messages": 49
+    }
+  }
+}

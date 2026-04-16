@@ -1,0 +1,1219 @@
+{
+  "date": "2026-04-09",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [
+        {
+          "term": "소스",
+          "count": 16
+        },
+        {
+          "term": "url",
+          "count": 13
+        },
+        {
+          "term": "가져온",
+          "count": 13
+        },
+        {
+          "term": "stars",
+          "count": 8
+        },
+        {
+          "term": "autoresearch",
+          "count": 6
+        },
+        {
+          "term": "패턴",
+          "count": 5
+        },
+        {
+          "term": "claude",
+          "count": 4
+        },
+        {
+          "term": "루프",
+          "count": 4
+        },
+        {
+          "term": "md",
+          "count": 4
+        },
+        {
+          "term": "클로드",
+          "count": 3
+        },
+        {
+          "term": "gstack",
+          "count": 3
+        },
+        {
+          "term": "v6",
+          "count": 3
+        },
+        {
+          "term": "karpathy",
+          "count": 3
+        },
+        {
+          "term": "실험",
+          "count": 3
+        },
+        {
+          "term": "수정",
+          "count": 3
+        },
+        {
+          "term": "frozen",
+          "count": 3
+        },
+        {
+          "term": "metric",
+          "count": 3
+        },
+        {
+          "term": "agent",
+          "count": 3
+        },
+        {
+          "term": "arxiv",
+          "count": 3
+        },
+        {
+          "term": "일요일",
+          "count": 2
+        },
+        {
+          "term": "9시",
+          "count": 2
+        },
+        {
+          "term": "맘껏",
+          "count": 2
+        },
+        {
+          "term": "openclaw",
+          "count": 2
+        },
+        {
+          "term": "구독",
+          "count": 2
+        },
+        {
+          "term": "오픈클로",
+          "count": 2
+        },
+        {
+          "term": "회사",
+          "count": 2
+        },
+        {
+          "term": "환불런",
+          "count": 2
+        },
+        {
+          "term": "인간",
+          "count": 2
+        },
+        {
+          "term": "보통",
+          "count": 2
+        },
+        {
+          "term": "쓰시나",
+          "count": 2
+        },
+        {
+          "term": "저도",
+          "count": 2
+        },
+        {
+          "term": "llm",
+          "count": 2
+        },
+        {
+          "term": "wiki",
+          "count": 2
+        },
+        {
+          "term": "알고",
+          "count": 2
+        },
+        {
+          "term": "요약",
+          "count": 2
+        },
+        {
+          "term": "code",
+          "count": 2
+        },
+        {
+          "term": "json",
+          "count": 2
+        },
+        {
+          "term": "바꾸면",
+          "count": 2
+        },
+        {
+          "term": "skill",
+          "count": 2
+        },
+        {
+          "term": "코드",
+          "count": 2
+        },
+        {
+          "term": "측정",
+          "count": 2
+        },
+        {
+          "term": "three",
+          "count": 2
+        },
+        {
+          "term": "file",
+          "count": 2
+        },
+        {
+          "term": "git",
+          "count": 2
+        },
+        {
+          "term": "전략",
+          "count": 2
+        },
+        {
+          "term": "strategies",
+          "count": 2
+        },
+        {
+          "term": "system",
+          "count": 2
+        },
+        {
+          "term": "prompt",
+          "count": 2
+        },
+        {
+          "term": "learning",
+          "count": 2
+        },
+        {
+          "term": "전체",
+          "count": 2
+        },
+        {
+          "term": "keep",
+          "count": 2
+        },
+        {
+          "term": "security",
+          "count": 2
+        },
+        {
+          "term": "논문",
+          "count": 2
+        },
+        {
+          "term": "반복",
+          "count": 2
+        },
+        {
+          "term": "self",
+          "count": 2
+        },
+        {
+          "term": "plateau",
+          "count": 2
+        },
+        {
+          "term": "dgm",
+          "count": 2
+        },
+        {
+          "term": "corpus",
+          "count": 2
+        },
+        {
+          "term": "radix",
+          "count": 2
+        },
+        {
+          "term": "자체",
+          "count": 2
+        },
+        {
+          "term": "클로드코드",
+          "count": 1
+        },
+        {
+          "term": "막혔다는게",
+          "count": 1
+        },
+        {
+          "term": "월구독",
+          "count": 1
+        },
+        {
+          "term": "으로쓰시던",
+          "count": 1
+        },
+        {
+          "term": "막혔다는거",
+          "count": 1
+        },
+        {
+          "term": "초과근무수당",
+          "count": 1
+        },
+        {
+          "term": "받으시는거",
+          "count": 1
+        },
+        {
+          "term": "all",
+          "count": 1
+        },
+        {
+          "term": "긴급",
+          "count": 1
+        },
+        {
+          "term": "무료웨비나",
+          "count": 1
+        },
+        {
+          "term": "오픈",
+          "count": 1
+        },
+        {
+          "term": "여러분",
+          "count": 1
+        },
+        {
+          "term": "이번에",
+          "count": 1
+        },
+        {
+          "term": "클코",
+          "count": 1
+        },
+        {
+          "term": "막혀",
+          "count": 1
+        },
+        {
+          "term": "나름",
+          "count": 1
+        },
+        {
+          "term": "이런저런",
+          "count": 1
+        },
+        {
+          "term": "방법",
+          "count": 1
+        },
+        {
+          "term": "찾아",
+          "count": 1
+        },
+        {
+          "term": "해결해나가",
+          "count": 1
+        },
+        {
+          "term": "과정",
+          "count": 1
+        },
+        {
+          "term": "당장",
+          "count": 1
+        },
+        {
+          "term": "여러분들한테",
+          "count": 1
+        },
+        {
+          "term": "알려드리",
+          "count": 1
+        },
+        {
+          "term": "싶은데",
+          "count": 1
+        },
+        {
+          "term": "평일",
+          "count": 1
+        },
+        {
+          "term": "저녁",
+          "count": 1
+        },
+        {
+          "term": "시간",
+          "count": 1
+        },
+        {
+          "term": "당분간",
+          "count": 1
+        },
+        {
+          "term": "아예",
+          "count": 1
+        },
+        {
+          "term": "안돼",
+          "count": 1
+        },
+        {
+          "term": "미친",
+          "count": 1
+        },
+        {
+          "term": "같지",
+          "count": 1
+        },
+        {
+          "term": "괜찮으세",
+          "count": 1
+        },
+        {
+          "term": "10시",
+          "count": 1
+        },
+        {
+          "term": "뽀피터스팀",
+          "count": 1
+        },
+        {
+          "term": "생존기",
+          "count": 1
+        },
+        {
+          "term": "막히",
+          "count": 1
+        },
+        {
+          "term": "말투",
+          "count": 1
+        },
+        {
+          "term": "t짝",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "stars 가져온",
+          "count": 7
+        },
+        {
+          "term": "url stars",
+          "count": 6
+        },
+        {
+          "term": "autoresearch url",
+          "count": 4
+        },
+        {
+          "term": "frozen metric",
+          "count": 3
+        },
+        {
+          "term": "url 가져온",
+          "count": 3
+        },
+        {
+          "term": "일요일 9시",
+          "count": 2
+        },
+        {
+          "term": "클로드 환불런",
+          "count": 2
+        },
+        {
+          "term": "llm wiki",
+          "count": 2
+        },
+        {
+          "term": "claude code",
+          "count": 2
+        },
+        {
+          "term": "karpathy autoresearch",
+          "count": 2
+        },
+        {
+          "term": "three file",
+          "count": 2
+        },
+        {
+          "term": "system prompt",
+          "count": 2
+        },
+        {
+          "term": "prompt learning",
+          "count": 2
+        },
+        {
+          "term": "소스 karpathy",
+          "count": 2
+        },
+        {
+          "term": "논문 url",
+          "count": 2
+        },
+        {
+          "term": "클로드코드 막혔다는게",
+          "count": 1
+        },
+        {
+          "term": "막혔다는게 월구독",
+          "count": 1
+        },
+        {
+          "term": "월구독 으로쓰시던",
+          "count": 1
+        },
+        {
+          "term": "으로쓰시던 클로드",
+          "count": 1
+        },
+        {
+          "term": "클로드 막혔다는거",
+          "count": 1
+        },
+        {
+          "term": "초과근무수당 받으시는거",
+          "count": 1
+        },
+        {
+          "term": "all 긴급",
+          "count": 1
+        },
+        {
+          "term": "긴급 무료웨비나",
+          "count": 1
+        },
+        {
+          "term": "무료웨비나 오픈",
+          "count": 1
+        },
+        {
+          "term": "오픈 일요일",
+          "count": 1
+        },
+        {
+          "term": "9시 여러분",
+          "count": 1
+        },
+        {
+          "term": "여러분 이번에",
+          "count": 1
+        },
+        {
+          "term": "이번에 클코",
+          "count": 1
+        },
+        {
+          "term": "클코 막혀",
+          "count": 1
+        },
+        {
+          "term": "막혀 나름",
+          "count": 1
+        },
+        {
+          "term": "나름 이런저런",
+          "count": 1
+        },
+        {
+          "term": "이런저런 방법",
+          "count": 1
+        },
+        {
+          "term": "방법 찾아",
+          "count": 1
+        },
+        {
+          "term": "찾아 해결해나가",
+          "count": 1
+        },
+        {
+          "term": "해결해나가 과정",
+          "count": 1
+        },
+        {
+          "term": "과정 당장",
+          "count": 1
+        },
+        {
+          "term": "당장 여러분들한테",
+          "count": 1
+        },
+        {
+          "term": "여러분들한테 맘껏",
+          "count": 1
+        },
+        {
+          "term": "맘껏 알려드리",
+          "count": 1
+        },
+        {
+          "term": "알려드리 싶은데",
+          "count": 1
+        },
+        {
+          "term": "싶은데 평일",
+          "count": 1
+        },
+        {
+          "term": "평일 저녁",
+          "count": 1
+        },
+        {
+          "term": "저녁 시간",
+          "count": 1
+        },
+        {
+          "term": "시간 당분간",
+          "count": 1
+        },
+        {
+          "term": "당분간 아예",
+          "count": 1
+        },
+        {
+          "term": "아예 안돼",
+          "count": 1
+        },
+        {
+          "term": "안돼 미친",
+          "count": 1
+        },
+        {
+          "term": "미친 같지",
+          "count": 1
+        },
+        {
+          "term": "같지 일요일",
+          "count": 1
+        },
+        {
+          "term": "9시 괜찮으세",
+          "count": 1
+        }
+      ],
+      "total_messages": 36
+    },
+    "초보방": {
+      "unigrams": [
+        {
+          "term": "search",
+          "count": 9
+        },
+        {
+          "term": "오픈클로",
+          "count": 9
+        },
+        {
+          "term": "클코",
+          "count": 8
+        },
+        {
+          "term": "코덱스",
+          "count": 8
+        },
+        {
+          "term": "openclaw",
+          "count": 7
+        },
+        {
+          "term": "gpt",
+          "count": 7
+        },
+        {
+          "term": "방법",
+          "count": 6
+        },
+        {
+          "term": "사용하",
+          "count": 6
+        },
+        {
+          "term": "일요일",
+          "count": 5
+        },
+        {
+          "term": "9시",
+          "count": 5
+        },
+        {
+          "term": "당장",
+          "count": 5
+        },
+        {
+          "term": "맘껏",
+          "count": 5
+        },
+        {
+          "term": "정보",
+          "count": 5
+        },
+        {
+          "term": "웨비나",
+          "count": 5
+        },
+        {
+          "term": "이번에",
+          "count": 4
+        },
+        {
+          "term": "시간",
+          "count": 4
+        },
+        {
+          "term": "ollama",
+          "count": 4
+        },
+        {
+          "term": "ai",
+          "count": 4
+        },
+        {
+          "term": "현재",
+          "count": 4
+        },
+        {
+          "term": "설치",
+          "count": 4
+        },
+        {
+          "term": "연결해",
+          "count": 4
+        },
+        {
+          "term": "acp",
+          "count": 4
+        },
+        {
+          "term": "방식",
+          "count": 4
+        },
+        {
+          "term": "구독형",
+          "count": 4
+        },
+        {
+          "term": "요금제",
+          "count": 4
+        },
+        {
+          "term": "일을",
+          "count": 4
+        },
+        {
+          "term": "md",
+          "count": 4
+        },
+        {
+          "term": "여러분",
+          "count": 3
+        },
+        {
+          "term": "막혀",
+          "count": 3
+        },
+        {
+          "term": "나름",
+          "count": 3
+        },
+        {
+          "term": "이런저런",
+          "count": 3
+        },
+        {
+          "term": "찾아",
+          "count": 3
+        },
+        {
+          "term": "해결해나가",
+          "count": 3
+        },
+        {
+          "term": "과정",
+          "count": 3
+        },
+        {
+          "term": "여러분들한테",
+          "count": 3
+        },
+        {
+          "term": "알려드리",
+          "count": 3
+        },
+        {
+          "term": "싶은데",
+          "count": 3
+        },
+        {
+          "term": "평일",
+          "count": 3
+        },
+        {
+          "term": "저녁",
+          "count": 3
+        },
+        {
+          "term": "당분간",
+          "count": 3
+        },
+        {
+          "term": "아예",
+          "count": 3
+        },
+        {
+          "term": "안돼",
+          "count": 3
+        },
+        {
+          "term": "미친",
+          "count": 3
+        },
+        {
+          "term": "같지",
+          "count": 3
+        },
+        {
+          "term": "괜찮으세",
+          "count": 3
+        },
+        {
+          "term": "뽀피터스팀",
+          "count": 3
+        },
+        {
+          "term": "막히",
+          "count": 3
+        },
+        {
+          "term": "밋업",
+          "count": 3
+        },
+        {
+          "term": "나에게",
+          "count": 3
+        },
+        {
+          "term": "혼자",
+          "count": 3
+        },
+        {
+          "term": "마케도니아어",
+          "count": 3
+        },
+        {
+          "term": "내용",
+          "count": 3
+        },
+        {
+          "term": "대화",
+          "count": 3
+        },
+        {
+          "term": "안녕하세",
+          "count": 3
+        },
+        {
+          "term": "봇을",
+          "count": 3
+        },
+        {
+          "term": "클코스킬",
+          "count": 3
+        },
+        {
+          "term": "봇에게",
+          "count": 3
+        },
+        {
+          "term": "acp방식",
+          "count": 3
+        },
+        {
+          "term": "로컬",
+          "count": 3
+        },
+        {
+          "term": "네이버",
+          "count": 3
+        },
+        {
+          "term": "지아코모",
+          "count": 3
+        },
+        {
+          "term": "비어룸",
+          "count": 3
+        },
+        {
+          "term": "세라",
+          "count": 3
+        },
+        {
+          "term": "아리",
+          "count": 3
+        },
+        {
+          "term": "all",
+          "count": 2
+        },
+        {
+          "term": "긴급",
+          "count": 2
+        },
+        {
+          "term": "무료웨비나",
+          "count": 2
+        },
+        {
+          "term": "오픈",
+          "count": 2
+        },
+        {
+          "term": "10시",
+          "count": 2
+        },
+        {
+          "term": "생존기",
+          "count": 2
+        },
+        {
+          "term": "구독",
+          "count": 2
+        },
+        {
+          "term": "말투",
+          "count": 2
+        },
+        {
+          "term": "t짝",
+          "count": 2
+        },
+        {
+          "term": "얼리버드마감",
+          "count": 2
+        },
+        {
+          "term": "25에",
+          "count": 2
+        },
+        {
+          "term": "다같",
+          "count": 2
+        },
+        {
+          "term": "오프라인",
+          "count": 2
+        },
+        {
+          "term": "모여",
+          "count": 2
+        },
+        {
+          "term": "지식공유하",
+          "count": 2
+        },
+        {
+          "term": "원없",
+          "count": 2
+        },
+        {
+          "term": "얻어가",
+          "count": 2
+        },
+        {
+          "term": "봇도",
+          "count": 2
+        },
+        {
+          "term": "자랑하기",
+          "count": 2
+        },
+        {
+          "term": "신청하기",
+          "count": 2
+        },
+        {
+          "term": "nanoclaw",
+          "count": 2
+        },
+        {
+          "term": "vs",
+          "count": 2
+        },
+        {
+          "term": "맞는",
+          "count": 2
+        },
+        {
+          "term": "무료",
+          "count": 2
+        },
+        {
+          "term": "채팅",
+          "count": 2
+        },
+        {
+          "term": "있어",
+          "count": 2
+        },
+        {
+          "term": "전체",
+          "count": 2
+        },
+        {
+          "term": "안녕",
+          "count": 2
+        },
+        {
+          "term": "사람",
+          "count": 2
+        },
+        {
+          "term": "봇이",
+          "count": 2
+        },
+        {
+          "term": "세팅",
+          "count": 2
+        },
+        {
+          "term": "쓰고",
+          "count": 2
+        },
+        {
+          "term": "구매해",
+          "count": 2
+        },
+        {
+          "term": "없을까",
+          "count": 2
+        },
+        {
+          "term": "노트북",
+          "count": 2
+        },
+        {
+          "term": "있습니",
+          "count": 2
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "일요일 9시",
+          "count": 5
+        },
+        {
+          "term": "여러분 이번에",
+          "count": 3
+        },
+        {
+          "term": "이번에 클코",
+          "count": 3
+        },
+        {
+          "term": "클코 막혀",
+          "count": 3
+        },
+        {
+          "term": "막혀 나름",
+          "count": 3
+        },
+        {
+          "term": "나름 이런저런",
+          "count": 3
+        },
+        {
+          "term": "이런저런 방법",
+          "count": 3
+        },
+        {
+          "term": "방법 찾아",
+          "count": 3
+        },
+        {
+          "term": "찾아 해결해나가",
+          "count": 3
+        },
+        {
+          "term": "해결해나가 과정",
+          "count": 3
+        },
+        {
+          "term": "과정 당장",
+          "count": 3
+        },
+        {
+          "term": "당장 여러분들한테",
+          "count": 3
+        },
+        {
+          "term": "여러분들한테 맘껏",
+          "count": 3
+        },
+        {
+          "term": "맘껏 알려드리",
+          "count": 3
+        },
+        {
+          "term": "알려드리 싶은데",
+          "count": 3
+        },
+        {
+          "term": "싶은데 평일",
+          "count": 3
+        },
+        {
+          "term": "평일 저녁",
+          "count": 3
+        },
+        {
+          "term": "저녁 시간",
+          "count": 3
+        },
+        {
+          "term": "시간 당분간",
+          "count": 3
+        },
+        {
+          "term": "당분간 아예",
+          "count": 3
+        },
+        {
+          "term": "아예 안돼",
+          "count": 3
+        },
+        {
+          "term": "안돼 미친",
+          "count": 3
+        },
+        {
+          "term": "미친 같지",
+          "count": 3
+        },
+        {
+          "term": "같지 일요일",
+          "count": 3
+        },
+        {
+          "term": "9시 괜찮으세",
+          "count": 3
+        },
+        {
+          "term": "오픈클로 설치",
+          "count": 3
+        },
+        {
+          "term": "구독형 요금제",
+          "count": 3
+        },
+        {
+          "term": "지아코모 비어룸",
+          "count": 3
+        },
+        {
+          "term": "비어룸 세라",
+          "count": 3
+        },
+        {
+          "term": "세라 아리",
+          "count": 3
+        },
+        {
+          "term": "all 긴급",
+          "count": 2
+        },
+        {
+          "term": "긴급 무료웨비나",
+          "count": 2
+        },
+        {
+          "term": "무료웨비나 오픈",
+          "count": 2
+        },
+        {
+          "term": "오픈 일요일",
+          "count": 2
+        },
+        {
+          "term": "9시 여러분",
+          "count": 2
+        },
+        {
+          "term": "괜찮으세 10시",
+          "count": 2
+        },
+        {
+          "term": "10시 openclaw",
+          "count": 2
+        },
+        {
+          "term": "openclaw 뽀피터스팀",
+          "count": 2
+        },
+        {
+          "term": "뽀피터스팀 생존기",
+          "count": 2
+        },
+        {
+          "term": "생존기 구독",
+          "count": 2
+        },
+        {
+          "term": "구독 막히",
+          "count": 2
+        },
+        {
+          "term": "막히 말투",
+          "count": 2
+        },
+        {
+          "term": "말투 t짝",
+          "count": 2
+        },
+        {
+          "term": "t짝 얼리버드마감",
+          "count": 2
+        },
+        {
+          "term": "얼리버드마감 25에",
+          "count": 2
+        },
+        {
+          "term": "25에 다같",
+          "count": 2
+        },
+        {
+          "term": "다같 오프라인",
+          "count": 2
+        },
+        {
+          "term": "오프라인 모여",
+          "count": 2
+        },
+        {
+          "term": "모여 맘껏",
+          "count": 2
+        },
+        {
+          "term": "맘껏 지식공유하",
+          "count": 2
+        }
+      ],
+      "total_messages": 78
+    }
+  }
+}

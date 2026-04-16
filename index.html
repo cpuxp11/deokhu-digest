@@ -1,478 +1,976 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>덕후방 다이제스트</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f7f7f7; color: #222; line-height: 1.65; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>카카오 대시보드</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #FF5A5F;
+      --accent-light: #fff0f0;
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --text: #222222;
+      --text-muted: #717171;
+      --border: #e0e0e0;
+      --tag-bg: #f0f0f0;
+      --radius: 12px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-.container { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
+    /* NAV */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .site-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      padding: 14px 16px 14px 0;
+      margin-right: 8px;
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 14px 14px 12px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .tab-btn:hover { color: var(--text); }
 
-/* Header */
-.header { padding: 32px 0 20px; margin-bottom: 8px; }
-.header h1 { font-size: 1.6em; font-weight: 800; color: #222; letter-spacing: -0.5px; }
-.header h1 span { color: #FF5A5F; }
-.subtitle { font-size: 0.95em; color: #717171; margin-top: 4px; }
-.date-nav { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
-.date-nav button { background: #fff; border: 1px solid #ddd; color: #222; padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 0.9em; font-weight: 500; transition: all 0.15s; }
-.date-nav button:hover { border-color: #222; }
-.date-nav input[type="date"] { background: #fff; border: 1px solid #ddd; color: #222; padding: 7px 14px; border-radius: 8px; font-size: 0.9em; }
+    /* MAIN */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
 
-/* Stats */
-.stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-.stat-chip { background: #fff; border: 1px solid #ebebeb; border-radius: 12px; padding: 14px 18px; flex: 1; min-width: 100px; }
-.stat-chip .label { font-size: 0.7em; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-.stat-chip .value { font-size: 1.5em; font-weight: 800; color: #FF5A5F; margin-top: 2px; }
-.stat-chip .sub { font-size: 0.78em; color: #999; margin-top: 2px; }
+    /* DATE NAV */
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .date-nav button {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 36px; height: 36px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .date-nav button:hover { background: var(--accent-light); }
+    .date-nav input[type="date"] {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--card);
+      cursor: pointer;
+      flex: 1;
+      max-width: 200px;
+    }
 
-/* Keywords */
-.keywords-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
-.kw { background: #fff; border: 1px solid #ebebeb; padding: 5px 14px; border-radius: 20px; font-size: 0.82em; color: #484848; font-weight: 500; }
+    /* PAGE HEADER */
+    .page-header { margin-bottom: 20px; }
+    .page-header h1 { font-size: 22px; font-weight: 800; line-height: 1.3; }
+    .page-header .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
 
-/* Section group */
-.section-group { background: #fff; border: 1px solid #ebebeb; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
-.section-header { display: flex; align-items: center; gap: 10px; padding: 18px 20px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; user-select: none; }
-.section-header:hover { background: #fafafa; }
-.section-icon { font-size: 1.1em; }
-.section-title { font-size: 1.05em; font-weight: 700; color: #222; }
-.section-count { background: #f0f0f0; color: #717171; padding: 2px 10px; border-radius: 10px; font-size: 0.78em; font-weight: 600; }
-.section-progress { margin-left: auto; font-size: 0.78em; color: #999; }
-.section-chevron { color: #ccc; font-size: 0.9em; transition: transform 0.2s; }
-.section-group.collapsed .section-chevron { transform: rotate(-90deg); }
-.section-group.collapsed .section-items { display: none; }
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .stat-chip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .stat-chip span { color: var(--text); font-weight: 700; }
 
-/* Items */
-.item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; }
-.item:last-child { border-bottom: none; }
-.item:hover { background: #fafafa; }
-.item.checked { opacity: 0.5; }
-.item.checked .item-text { text-decoration: line-through; }
+    /* KEYWORDS BAR */
+    .keywords-bar {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .kw-tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
 
-.item-check { flex-shrink: 0; margin-top: 2px; }
-.item-check input { width: 18px; height: 18px; accent-color: #FF5A5F; cursor: pointer; }
+    /* SECTION */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 20px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s;
+    }
+    .section-header:hover { background: #fafafa; }
+    .section-icon { font-size: 18px; }
+    .section-title { font-size: 16px; font-weight: 700; flex: 1; }
+    .section-count {
+      background: var(--tag-bg);
+      border-radius: 20px;
+      padding: 2px 9px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .chevron {
+      font-size: 12px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+    .section-body { padding: 0 20px 16px; }
+    .section.collapsed .section-body { display: none; }
 
-.item-content { flex: 1; min-width: 0; }
-.item-text { font-size: 0.92em; color: #222; line-height: 1.55; font-weight: 500; }
-.item-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
-.item-tag { background: #f7f7f7; color: #717171; padding: 2px 8px; border-radius: 6px; font-size: 0.72em; font-weight: 500; }
+    /* ITEM */
+    .item {
+      border-top: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .item:first-child { border-top: none; }
+    .item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .item-check {
+      width: 18px; height: 18px;
+      margin-top: 2px;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .item-text {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .item-text.done { text-decoration: line-through; color: var(--text-muted); }
+    .item-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      padding-left: 28px;
+    }
+    .item-tag {
+      background: var(--tag-bg);
+      color: var(--text-muted);
+      border-radius: 20px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .btn-angle, .btn-draft, .btn-copy {
+      border: none;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-angle {
+      background: #f0f0f0;
+      color: var(--text-muted);
+    }
+    .btn-angle:hover { background: #e0e0e0; }
+    .btn-draft {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .btn-draft:hover { background: #ffd9da; }
+    .btn-copy {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .btn-copy:hover { background: #c8e6c9; }
 
-/* Thread angle */
-.item-thread { margin-top: 10px; padding: 10px 14px; background: #FFF8F0; border-left: 3px solid #FF5A5F; border-radius: 0 8px 8px 0; font-size: 0.82em; color: #484848; line-height: 1.5; display: none; }
-.item-thread.open { display: block; }
-.item-thread-label { font-size: 0.7em; font-weight: 700; color: #FF5A5F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-.item-expand { background: none; border: none; color: #FF5A5F; font-size: 0.8em; font-weight: 600; cursor: pointer; margin-top: 6px; padding: 0; }
-.item-expand:hover { text-decoration: underline; }
+    /* THREAD ANGLE */
+    .angle-block {
+      margin: 8px 0 4px 28px;
+      background: #f9f9f9;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
 
-/* Thread drafts */
-.draft-card { background: #fff; border: 1px solid #ebebeb; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
-.draft-header { padding: 18px 20px 14px; border-bottom: 1px solid #f0f0f0; }
-.draft-badges { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
-.draft-target { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 700; }
-.draft-target.본방 { background: #FFF0F0; color: #FF5A5F; }
-.draft-target.초보방 { background: #F0F7FF; color: #3B82F6; }
-.draft-gsnb { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 600; background: #f5f5f5; color: #717171; }
-.draft-pmf { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 600; background: #F0FFF4; color: #22c55e; }
-.draft-title { font-size: 1.1em; font-weight: 700; color: #222; }
-.draft-chain { padding: 0; }
-.chain-post { padding: 16px 20px; border-bottom: 1px solid #f5f5f5; }
-.chain-post:last-child { border-bottom: none; }
-.chain-post.hook { background: #FFFBF5; border-left: 3px solid #FF5A5F; }
-.chain-post.body { background: #fff; border-left: 3px solid #ebebeb; }
-.chain-post.cta { background: #F8F8FF; border-left: 3px solid #3B82F6; }
-.chain-label { font-size: 0.68em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-.chain-post.hook .chain-label { color: #FF5A5F; }
-.chain-post.body .chain-label { color: #999; }
-.chain-post.cta .chain-label { color: #3B82F6; }
-.chain-text { white-space: pre-wrap; font-size: 0.88em; color: #333; line-height: 1.7; }
-.chain-copy { display: inline-block; margin-top: 8px; padding: 4px 12px; background: #FF5A5F; color: #fff; border: none; border-radius: 6px; font-size: 0.75em; font-weight: 600; cursor: pointer; }
-.chain-copy:hover { background: #e04e52; }
-.chain-copy.copied { background: #22c55e; }
-.draft-collapse { max-height: 280px; overflow: hidden; position: relative; }
-.draft-collapse:not(.expanded)::after { content:''; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(transparent,#fff); pointer-events:none; }
-.draft-collapse.expanded { max-height: none; }
-.draft-toggle { display: block; width: 100%; padding: 12px; background: none; border: none; border-top: 1px solid #f0f0f0; color: #FF5A5F; font-weight: 600; font-size: 0.85em; cursor: pointer; }
-.draft-toggle:hover { background: #fafafa; }
+    /* DRAFT BLOCK */
+    .draft-block {
+      margin: 8px 0 4px 28px;
+      background: #fff8f8;
+      border: 1px solid #ffd5d6;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .draft-block pre {
+      font-family: 'Pretendard Variable', sans-serif;
+      font-size: 13px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.7;
+    }
+    .draft-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .draft-loading {
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 8px 0 0 28px;
+    }
 
-/* Threads Preview Modal */
-.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:100; justify-content:center; align-items:center; padding:20px; }
-.modal-overlay.open { display:flex; }
-.modal { background:#fff; border-radius:16px; max-width:520px; width:100%; max-height:90vh; overflow-y:auto; }
-.modal-header { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid #f0f0f0; }
-.modal-header h3 { font-size:1em; font-weight:700; }
-.modal-close { background:none; border:none; font-size:1.4em; cursor:pointer; color:#999; padding:4px 8px; }
-.modal-close:hover { color:#222; }
-.modal-actions { display:flex; gap:8px; padding:12px 20px; border-bottom:1px solid #f0f0f0; }
-.modal-btn { padding:8px 16px; border-radius:8px; font-size:0.82em; font-weight:600; cursor:pointer; border:1px solid #ddd; background:#fff; color:#222; }
-.modal-btn:hover { background:#f7f7f7; }
-.modal-btn.primary { background:#000; color:#fff; border-color:#000; }
-.modal-btn.primary:hover { background:#333; }
+    /* SEARCH TAB */
+    .search-box {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .search-box input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: inherit;
+      font-size: 15px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-box input:focus { border-color: var(--accent); }
+    .search-filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .search-status {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .result-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .result-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .result-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .result-room {
+      font-size: 11px;
+      background: var(--tag-bg);
+      color: var(--text-muted);
+      border-radius: 20px;
+      padding: 2px 8px;
+    }
+    .result-text { font-size: 14px; line-height: 1.65; }
+    .result-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
 
-/* Thread mockup */
-.thread-mock { padding:16px 20px; }
-.thread-post { display:flex; gap:12px; padding:14px 0; }
-.thread-post:not(:last-child) { border-bottom:1px solid #f5f5f5; }
-.thread-avatar-col { display:flex; flex-direction:column; align-items:center; gap:0; }
-.thread-avatar { width:36px; height:36px; border-radius:50%; background:#000; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7em; font-weight:800; flex-shrink:0; }
-.thread-line { width:2px; flex:1; background:#e0e0e0; margin:4px 0; min-height:16px; }
-.thread-content { flex:1; min-width:0; }
-.thread-username { font-size:0.85em; font-weight:700; color:#000; }
-.thread-time { font-size:0.75em; color:#999; margin-left:6px; }
-.thread-text { font-size:0.9em; color:#222; line-height:1.6; margin-top:4px; white-space:pre-wrap; word-break:break-word; }
-.thread-chars { font-size:0.7em; color:#999; margin-top:6px; }
-.thread-chars.warn { color:#FF5A5F; font-weight:600; }
-.thread-type-badge { display:inline-block; padding:1px 6px; border-radius:4px; font-size:0.65em; font-weight:600; margin-left:6px; }
-.thread-type-badge.hook { background:#FFF0F0; color:#FF5A5F; }
-.thread-type-badge.body { background:#f5f5f5; color:#999; }
-.thread-type-badge.cta { background:#F0F0FF; color:#3B82F6; }
+    /* TREND TAB */
+    .trend-section { margin-bottom: 28px; }
+    .trend-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .bar-chart { display: flex; flex-direction: column; gap: 8px; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .bar-label {
+      width: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: right;
+      flex-shrink: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .bar-track {
+      flex: 1;
+      background: #f0f0f0;
+      border-radius: 4px;
+      height: 24px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      transition: width 0.4s ease;
+      min-width: 2px;
+    }
+    .bar-fill.hot { background: #ff8c00; }
+    .bar-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .bar-count.outside {
+      color: var(--text-muted);
+      padding-left: 6px;
+    }
+    .fire-badge {
+      font-size: 14px;
+      flex-shrink: 0;
+    }
 
-/* Empty / Loading */
-.empty { text-align: center; padding: 60px 20px; color: #999; }
-.loading { text-align: center; padding: 80px 20px; }
-.loading .spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid #ebebeb; border-top-color: #FF5A5F; border-radius: 50%; animation: spin 0.8s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
+    /* TREND TABLE */
+    .trend-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .trend-table th {
+      background: #f0f0f0;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .trend-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .trend-table tr:last-child td { border-bottom: none; }
+    .trend-table td.kw-cell { font-weight: 700; }
 
-@media (max-width: 640px) {
-  .container { padding: 16px 12px; }
-  .header h1 { font-size: 1.3em; }
-  .stats-bar { gap: 6px; }
-  .stat-chip { min-width: 80px; padding: 10px 12px; }
-  .stat-chip .value { font-size: 1.2em; }
-  .item { padding: 12px 14px; gap: 10px; }
-  .section-header { padding: 14px 14px 12px; }
-}
-</style>
+    /* EMPTY */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+    .empty-state .icon { font-size: 40px; margin-bottom: 10px; }
+
+    /* LOADING */
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .site-title { font-size: 14px; padding-right: 12px; }
+      .tab-btn { font-size: 13px; padding: 14px 10px 12px; }
+      .container { padding: 16px 12px 60px; }
+      .bar-label { width: 70px; font-size: 12px; }
+    }
+  </style>
 </head>
 <body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <div class="site-title">카카오 대시보드</div>
+    <button class="tab-btn active" data-tab="today">📋 오늘</button>
+    <button class="tab-btn" data-tab="search">🔍 검색</button>
+    <button class="tab-btn" data-tab="trend">📈 트렌드</button>
+  </div>
+</nav>
+
 <div class="container">
 
-  <div class="header">
-    <h1><span>덕후방</span> 다이제스트</h1>
-    <div id="subtitle" class="subtitle"></div>
+  <!-- TAB: 오늘 -->
+  <div id="tab-today" class="tab-panel active">
     <div class="date-nav">
-      <button id="prev-day">&larr;</button>
-      <input type="date" id="date-picker">
-      <button id="next-day">&rarr;</button>
+      <button id="btn-prev" title="이전 날짜">←</button>
+      <input type="date" id="date-picker" />
+      <button id="btn-next" title="다음 날짜">→</button>
+    </div>
+    <div id="today-content">
+      <div class="loading">날짜를 선택하세요...</div>
     </div>
   </div>
 
-  <div id="loading" class="loading"><div class="spinner"></div></div>
-
-  <div id="content" style="display:none;">
-    <div class="stats-bar" id="stats-bar"></div>
-    <div class="keywords-bar" id="keywords-bar"></div>
-    <div id="sections"></div>
-  </div>
-
-  <div id="error" class="empty" style="display:none;">
-    <p>해당 날짜의 다이제스트가 아직 없어요.</p>
-  </div>
-
-</div>
-
-<div class="modal-overlay" id="thread-modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Threads 미리보기 — @bbojjaki_ai</h3>
-      <button class="modal-close" onclick="closeModal()">&times;</button>
+  <!-- TAB: 검색 -->
+  <div id="tab-search" class="tab-panel">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="키워드로 검색..." autocomplete="off" />
     </div>
-    <div class="modal-actions">
-      <button class="modal-btn primary" onclick="copyAllThread()">전체 복사</button>
-      <button class="modal-btn" onclick="closeModal()">닫기</button>
+    <div class="search-filters">
+      <button class="filter-btn active" data-room="all">전체</button>
+      <button class="filter-btn" data-room="덕후방">덕후방</button>
+      <button class="filter-btn" data-room="초보방">초보방</button>
     </div>
-    <div class="thread-mock" id="thread-mock-body"></div>
+    <div id="search-status" class="search-status"></div>
+    <div id="search-results"></div>
   </div>
+
+  <!-- TAB: 트렌드 -->
+  <div id="tab-trend" class="tab-panel">
+    <div id="trend-content">
+      <div class="loading">트렌드 데이터 로딩 중...</div>
+    </div>
+  </div>
+
 </div>
 
 <script>
-const BASE = 'data';
-let dates = [];
-let currentDate = '';
-let checkState = {};
+// ─── State ──────────────────────────────────────────────────────────────────
+const state = {
+  currentDate: todayStr(),
+  searchQuery: '',
+  searchRoom: 'all',
+  allDates: [],
+  editorialCache: {},
+  keywordsCache: {},
+  searchDebounce: null,
+};
 
-function loadChecks() {
-  try { checkState = JSON.parse(localStorage.getItem('deokhu-checks') || '{}'); } catch(e) { checkState = {}; }
-}
-function saveChecks() {
-  localStorage.setItem('deokhu-checks', JSON.stringify(checkState));
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
 }
 
-async function init() {
-  loadChecks();
+function fmtDate(d) {
+  return d.replace(/-/g, '.');
+}
+
+// ─── Tab ─────────────────────────────────────────────────────────────────────
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+
+    if (tab === 'trend' && !state.trendLoaded) {
+      loadTrend();
+    }
+    if (tab === 'search' && !state.datesLoaded) {
+      loadDates();
+    }
+  });
+});
+
+// ─── Today Tab ───────────────────────────────────────────────────────────────
+const datePicker = document.getElementById('date-picker');
+datePicker.value = state.currentDate;
+
+datePicker.addEventListener('change', () => {
+  state.currentDate = datePicker.value;
+  loadToday();
+});
+
+document.getElementById('btn-prev').addEventListener('click', () => {
+  const d = new Date(state.currentDate);
+  d.setDate(d.getDate() - 1);
+  state.currentDate = d.toISOString().slice(0, 10);
+  datePicker.value = state.currentDate;
+  loadToday();
+});
+
+document.getElementById('btn-next').addEventListener('click', () => {
+  const d = new Date(state.currentDate);
+  d.setDate(d.getDate() + 1);
+  state.currentDate = d.toISOString().slice(0, 10);
+  datePicker.value = state.currentDate;
+  loadToday();
+});
+
+async function loadToday() {
+  const date = state.currentDate;
+  const el = document.getElementById('today-content');
+  el.innerHTML = '<div class="loading">로딩 중...</div>';
+
   try {
-    const res = await fetch(BASE + '/index.json');
-    dates = await res.json();
-    dates.sort().reverse();
-    if (dates.length > 0) {
-      currentDate = dates[0];
-      document.getElementById('date-picker').value = currentDate;
-      await loadDate(currentDate);
-    } else { showError(); }
-  } catch(e) { showError(); }
+    const res = await fetch(`/data/editorial/${date}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      state.editorialCache[date] = data;
+      el.innerHTML = renderEditorial(data);
+      bindItemEvents(el, date);
+      return;
+    }
+  } catch(e) {}
+
+  // Fallback: QA files
+  try {
+    const [r1, r2] = await Promise.allSettled([
+      fetch(`/data/qa/${date}-덕후방.json`).then(r => r.ok ? r.json() : null),
+      fetch(`/data/qa/${date}-초보방.json`).then(r => r.ok ? r.json() : null),
+    ]);
+    const qa1 = r1.status === 'fulfilled' ? r1.value : null;
+    const qa2 = r2.status === 'fulfilled' ? r2.value : null;
+    if (qa1 || qa2) {
+      el.innerHTML = renderQA(date, qa1, qa2);
+      bindItemEvents(el, date);
+      return;
+    }
+  } catch(e) {}
+
+  el.innerHTML = `<div class="empty-state"><div class="icon">📭</div><div>${fmtDate(date)} 데이터가 없습니다.</div></div>`;
 }
 
-async function loadDate(date) {
-  document.getElementById('loading').style.display = 'block';
-  document.getElementById('content').style.display = 'none';
-  document.getElementById('error').style.display = 'none';
+function renderEditorial(data) {
+  const rooms = data.rooms || {};
+  const totalMsgs = Object.values(rooms).reduce((s, r) => s + (r.total_msgs || 0), 0);
+  const totalUsers = Object.values(rooms).reduce((s, r) => s + (r.active_users || 0), 0);
+  const totalMedia = Object.values(rooms).reduce((s, r) => s + (r.media || 0), 0);
+  const keywords = data.top_keywords || [];
+
+  let html = `
+    <div class="page-header">
+      <h1>${esc(data.title || data.date)}</h1>
+      ${data.subtitle ? `<div class="subtitle">${esc(data.subtitle)}</div>` : ''}
+    </div>
+    <div class="stats-bar">
+      <div class="stat-chip">메시지 <span>${totalMsgs}</span></div>
+      <div class="stat-chip">참여자 <span>${totalUsers}</span></div>
+      <div class="stat-chip">미디어 <span>${totalMedia}</span></div>
+    </div>`;
+
+  if (keywords.length) {
+    html += `<div class="keywords-bar">` + keywords.slice(0, 12).map(k =>
+      `<span class="kw-tag">${esc(k)}</span>`
+    ).join('') + `</div>`;
+  }
+
+  const sections = data.sections || [];
+  sections.forEach(sec => {
+    const items = sec.items || [];
+    html += `
+      <div class="section" data-section="${esc(sec.id)}">
+        <div class="section-header" onclick="toggleSection(this.parentElement)">
+          <span class="section-icon">${sec.icon || ''}</span>
+          <span class="section-title">${esc(sec.title)}</span>
+          <span class="section-count">${items.length}</span>
+          <span class="chevron">▾</span>
+        </div>
+        <div class="section-body">`;
+
+    items.forEach(item => {
+      html += renderItem(item, data.date, '덕후방');
+    });
+    html += `</div></div>`;
+  });
+  return html;
+}
+
+function renderQA(date, qa1, qa2) {
+  let html = `<div class="page-header"><h1>${fmtDate(date)} QnA</h1></div>`;
+  [[qa1, '덕후방'], [qa2, '초보방']].forEach(([qa, room]) => {
+    if (!qa) return;
+    const items = qa.messages || qa.items || [];
+    if (!items.length) return;
+    html += `
+      <div class="section">
+        <div class="section-header" onclick="toggleSection(this.parentElement)">
+          <span class="section-icon">💬</span>
+          <span class="section-title">${room}</span>
+          <span class="section-count">${items.length}</span>
+          <span class="chevron">▾</span>
+        </div>
+        <div class="section-body">`;
+    items.forEach(item => {
+      html += renderItem(item, date, room);
+    });
+    html += `</div></div>`;
+  });
+  return html;
+}
+
+function renderItem(item, date, room) {
+  const id = item.id || Math.random().toString(36).slice(2);
+  const checked = localStorage.getItem(`check-${date}-${id}`) === '1';
+  const tags = (item.keywords || []).map(k => `<span class="item-tag">${esc(k)}</span>`).join('');
+  const angle = item.thread_angle || '';
+
+  return `
+    <div class="item" data-id="${id}" data-date="${date}" data-room="${esc(room)}">
+      <div class="item-row">
+        <input type="checkbox" class="item-check" ${checked ? 'checked' : ''} onchange="toggleCheck(this,'${date}','${id}')"/>
+        <div class="item-text${checked ? ' done' : ''}">${esc(item.text || '')}</div>
+      </div>
+      <div class="item-footer">
+        ${tags}
+        ${angle ? `<button class="btn-angle" onclick="toggleAngle(this)">스레드 앵글</button>` : ''}
+        <button class="btn-draft" onclick="generateDraft(this)" data-text="${escAttr(item.text||'')}" data-angle="${escAttr(angle)}" data-room="${escAttr(room)}" data-date="${date}">✍️ 초안 생성</button>
+      </div>
+      ${angle ? `<div class="angle-block" style="display:none">${esc(angle)}</div>` : ''}
+      <div class="draft-area"></div>
+    </div>`;
+}
+
+function toggleSection(el) {
+  el.classList.toggle('collapsed');
+}
+
+function toggleCheck(cb, date, id) {
+  localStorage.setItem(`check-${date}-${id}`, cb.checked ? '1' : '0');
+  const textEl = cb.closest('.item').querySelector('.item-text');
+  if (textEl) textEl.classList.toggle('done', cb.checked);
+}
+
+function toggleAngle(btn) {
+  const block = btn.closest('.item').querySelector('.angle-block');
+  if (!block) return;
+  const hidden = block.style.display === 'none';
+  block.style.display = hidden ? 'block' : 'none';
+  btn.textContent = hidden ? '앵글 닫기' : '스레드 앵글';
+}
+
+async function generateDraft(btn) {
+  const item = btn.closest('.item');
+  const draftArea = item.querySelector('.draft-area');
+  const text = btn.dataset.text;
+  const angle = btn.dataset.angle;
+  const room = btn.dataset.room;
+  const date = btn.dataset.date;
+
+  btn.disabled = true;
+  btn.textContent = '생성 중...';
+  draftArea.innerHTML = '<div class="draft-loading">✍️ Claude가 초안을 작성 중입니다 (30~60초)...</div>';
+
   try {
-    const res = await fetch(BASE + '/' + date + '.json');
-    if (!res.ok) throw new Error('not found');
+    // GitHub Pages: draft API 불가
+      alert('초안 생성은 로컬 서버(python3 server.py)에서만 가능합니다.');
+      btn.textContent = '✍️초안 생성';
+      return;
+      const res = await fetch('/api/draft', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({text, thread_angle: angle, room, date}),
+    });
     const data = await res.json();
-    render(data);
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
+    if (data.ok) {
+      draftArea.innerHTML = `
+        <div class="draft-block">
+          <pre>${esc(data.draft)}</pre>
+          <div class="draft-actions">
+            <button class="btn-copy" onclick="copyDraft(this)">📋 복사</button>
+          </div>
+        </div>`;
+    } else {
+      draftArea.innerHTML = `<div class="draft-loading" style="color:#c00">오류: ${esc(data.error||'알 수 없는 오류')}</div>`;
+    }
   } catch(e) {
-    document.getElementById('loading').style.display = 'none';
-    showError();
+    draftArea.innerHTML = `<div class="draft-loading" style="color:#c00">네트워크 오류: ${esc(e.message)}</div>`;
   }
+  btn.disabled = false;
+  btn.textContent = '✍️ 초안 재생성';
 }
 
-function showError() {
-  document.getElementById('error').style.display = 'block';
-  document.getElementById('content').style.display = 'none';
+function copyDraft(btn) {
+  const pre = btn.closest('.draft-block').querySelector('pre');
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    btn.textContent = '✅ 복사됨';
+    setTimeout(() => { btn.textContent = '📋 복사'; }, 2000);
+  });
 }
 
-function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+function bindItemEvents(el, date) {}
 
-function render(d) {
-  window._lastData = d;
-  // Subtitle
-  document.getElementById('subtitle').textContent = d.subtitle || d.title || '';
+// ─── Search Tab ───────────────────────────────────────────────────────────────
+async function loadDates() {
+  state.datesLoaded = true;
+  try {
+    const res = await fetch('/data/dates.json');
+    state.allDates = await res.json();
+  } catch(e) { state.allDates = []; }
+}
 
-  // Stats
-  const rooms = d.rooms || {};
-  const totalMsgs = Object.values(rooms).reduce((s,r) => s + r.total_msgs, 0);
-  const totalUsers = Object.values(rooms).reduce((s,r) => s + r.active_users, 0);
-  document.getElementById('stats-bar').innerHTML =
-    statChip('Messages', totalMsgs, Object.entries(rooms).map(([n,r]) => n+' '+r.total_msgs).join(' / ')) +
-    statChip('Speakers', totalUsers, Object.entries(rooms).map(([n,r]) => n+' '+r.active_users).join(' / ')) +
-    statChip('Media', Object.values(rooms).reduce((s,r) => s+r.media, 0), '');
+document.getElementById('search-input').addEventListener('input', (e) => {
+  state.searchQuery = e.target.value.trim();
+  clearTimeout(state.searchDebounce);
+  state.searchDebounce = setTimeout(runSearch, 350);
+});
 
-  // Keywords
-  document.getElementById('keywords-bar').innerHTML = (d.top_keywords||[]).map(k => '<span class="kw">'+esc(k)+'</span>').join('');
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.searchRoom = btn.dataset.room;
+    runSearch();
+  });
+});
 
-  // Sections (new editorial format)
-  const sectionsEl = document.getElementById('sections');
-  let html = '';
-  if (d.sections) {
-    html += d.sections.map(sec => renderSection(sec, d.date)).join('');
-  } else {
-    html += renderLegacy(d);
+async function runSearch() {
+  const q = state.searchQuery.toLowerCase();
+  if (!q) {
+    document.getElementById('search-results').innerHTML = '';
+    document.getElementById('search-status').textContent = '';
+    return;
   }
+  if (!state.datesLoaded) await loadDates();
 
-  // Thread drafts
-  if (d.thread_drafts && d.thread_drafts.length) {
-    html += '<div class="section-group" style="border-color:#FF5A5F; border-width:2px;">';
-    html += '<div class="section-header" onclick="toggleSection(this)">';
-    html += '<span class="section-icon">✍️</span>';
-    html += '<span class="section-title">스레드 드래프트</span>';
-    html += '<span class="section-count">' + d.thread_drafts.length + '</span>';
-    html += '<span class="section-chevron">&#9662;</span>';
-    html += '</div><div class="section-items" style="padding:0;">';
-    html += d.thread_drafts.map(dr => renderDraft(dr)).join('');
-    html += '</div></div>';
-  }
-  sectionsEl.innerHTML = html;
-}
+  const statusEl = document.getElementById('search-status');
+  const resultsEl = document.getElementById('search-results');
+  statusEl.textContent = '검색 중...';
+  resultsEl.innerHTML = '';
 
-function statChip(label, value, sub) {
-  return '<div class="stat-chip"><div class="label">'+label+'</div><div class="value">'+value+'</div>'+(sub?'<div class="sub">'+esc(sub)+'</div>':'')+'</div>';
-}
-
-function renderSection(sec, date) {
-  const items = sec.items || [];
-  const checkedCount = items.filter(it => isChecked(date, it.id)).length;
-  const progress = items.length > 0 ? checkedCount + '/' + items.length : '';
-  return '<div class="section-group">' +
-    '<div class="section-header" onclick="toggleSection(this)">' +
-      '<span class="section-icon">' + (sec.icon||'') + '</span>' +
-      '<span class="section-title">' + esc(sec.title) + '</span>' +
-      '<span class="section-count">' + items.length + '</span>' +
-      '<span class="section-progress">' + progress + '</span>' +
-      '<span class="section-chevron">&#9662;</span>' +
-    '</div>' +
-    '<div class="section-items">' +
-      items.map(it => renderItem(it, date)).join('') +
-    '</div>' +
-  '</div>';
-}
-
-function renderItem(it, date) {
-  const checked = isChecked(date, it.id);
-  const hasThread = it.thread_angle && it.thread_angle.trim();
-  return '<div class="item' + (checked?' checked':'') + '">' +
-    '<div class="item-check"><input type="checkbox"' + (checked?' checked':'') + ' onchange="onCheck(this,\'' + date + '\',\'' + it.id + '\')" /></div>' +
-    '<div class="item-content">' +
-      '<div class="item-text">' + esc(it.text) + '</div>' +
-      '<div class="item-tags">' + (it.keywords||[]).map(k => '<span class="item-tag">'+esc(k)+'</span>').join('') + '</div>' +
-      (hasThread ? '<button class="item-expand" onclick="toggleThread(this)">스레드 앵글 보기</button>' +
-        '<div class="item-thread"><div class="item-thread-label">Thread Draft</div>' + esc(it.thread_angle) + '</div>' : '') +
-    '</div>' +
-  '</div>';
-}
-
-function renderLegacy(d) {
-  // Wrap old format into section-like structure
-  let html = '';
-  if (d.hot_topics && d.hot_topics.length) {
-    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🔥</span><span class="section-title">핫토픽 TOP 5</span><span class="section-count">'+d.hot_topics.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
-    d.hot_topics.forEach(t => {
-      html += '<div class="item"><div class="item-content"><div class="item-text">#'+t.rank+' '+esc(t.summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(t.room)+'</span><span class="item-tag">'+t.time+'</span><span class="item-tag">'+t.msg_count+'건/'+t.user_count+'명</span>'+(t.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
+  const results = [];
+  for (const date of state.allDates) {
+    let data = state.editorialCache[date];
+    if (!data) {
+      try {
+        const res = await fetch(`/data/editorial/${date}.json`);
+        if (res.ok) { data = await res.json(); state.editorialCache[date] = data; }
+      } catch(e) { continue; }
+    }
+    if (!data) continue;
+    const sections = data.sections || [];
+    sections.forEach(sec => {
+      (sec.items || []).forEach(item => {
+        const rooms = Object.keys(data.rooms || {'덕후방':1});
+        const room = rooms[0] || '덕후방';
+        if (state.searchRoom !== 'all' && room !== state.searchRoom) return;
+        const text = (item.text || '').toLowerCase();
+        const kws = (item.keywords || []).join(' ').toLowerCase();
+        if (text.includes(q) || kws.includes(q)) {
+          results.push({date, room, item});
+        }
+      });
     });
-    html += '</div></div>';
   }
-  if (d.unanswered && d.unanswered.length) {
-    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🔴</span><span class="section-title">무응답 질문</span><span class="section-count">'+d.unanswered.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
-    d.unanswered.forEach(u => {
-      html += '<div class="item"><div class="item-content"><div class="item-text">'+esc(u.question_summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(u.room)+'</span>'+(u.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
-    });
-    html += '</div></div>';
+
+  statusEl.textContent = `${results.length}개 결과`;
+  if (!results.length) {
+    resultsEl.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><div>"${esc(q)}" 검색 결과가 없습니다.</div></div>`;
+    return;
   }
-  if (d.card_candidates && d.card_candidates.length) {
-    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🃏</span><span class="section-title">카드 후보</span><span class="section-count">'+d.card_candidates.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
-    d.card_candidates.forEach(c => {
-      html += '<div class="item"><div class="item-content"><div class="item-text">#'+c.id+' '+esc(c.summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(c.room)+'</span><span class="item-tag">'+c.time+'</span><span class="item-tag">'+c.msg_count+'건</span>'+(c.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
-    });
-    html += '</div></div>';
-  }
-  return html || '<div class="empty"><p>데이터 없음</p></div>';
-}
 
-function isChecked(date, id) { return !!(checkState[date] && checkState[date][id]); }
-
-function onCheck(el, date, id) {
-  if (!checkState[date]) checkState[date] = {};
-  checkState[date][id] = el.checked;
-  saveChecks();
-  const item = el.closest('.item');
-  if (el.checked) item.classList.add('checked'); else item.classList.remove('checked');
-  // Update progress
-  loadDate(currentDate);
-}
-
-function renderDraft(dr) {
-  const chain = dr.chain || [];
-  const labels = {hook:'Hook — 첫 글', body:'본문', cta:'CTA — 마무리'};
-  let chainHtml = chain.map((p,i) => {
-    const lbl = p.label || labels[p.type] || p.type;
-    return '<div class="chain-post ' + p.type + '">' +
-      '<div class="chain-label">' + esc(lbl) + '</div>' +
-      '<div class="chain-text">' + esc(p.text) + '</div>' +
-      '<button class="chain-copy" onclick="copyChain(this,\'' + dr.id + '-' + i + '\')">복사</button>' +
-    '</div>';
+  resultsEl.innerHTML = results.slice(0, 50).map(({date, room, item}) => {
+    const tags = (item.keywords||[]).map(k => `<span class="item-tag">${esc(k)}</span>`).join('');
+    return `
+      <div class="result-card">
+        <div class="result-meta">
+          <span class="result-date">${fmtDate(date)}</span>
+          <span class="result-room">${esc(room)}</span>
+        </div>
+        <div class="result-text">${esc(item.text||'')}</div>
+        <div class="result-tags">${tags}</div>
+        <div style="margin-top:8px">
+          <button class="btn-draft" onclick="generateDraft(this)" data-text="${escAttr(item.text||'')}" data-angle="${escAttr(item.thread_angle||'')}" data-room="${escAttr(room)}" data-date="${date}">✍️ 초안 생성</button>
+        </div>
+        <div class="draft-area"></div>
+      </div>`;
   }).join('');
-
-  return '<div class="draft-card">' +
-    '<div class="draft-header">' +
-      '<div class="draft-badges">' +
-        '<span class="draft-target ' + esc(dr.target) + '">' + esc(dr.target) + '</span>' +
-        '<span class="draft-gsnb">' + esc(dr.gsnb) + '</span>' +
-        (dr.pmf ? '<span class="draft-pmf">PMF ' + esc(dr.pmf.split(' ')[0]) + '</span>' : '') +
-      '</div>' +
-      '<div class="draft-title">' + esc(dr.title) + '</div>' +
-    '</div>' +
-    '<div class="draft-collapse" id="draft-chain-' + dr.id + '">' +
-      '<div class="draft-chain">' + chainHtml + '</div>' +
-    '</div>' +
-    '<div style="display:flex;gap:0;border-top:1px solid #f0f0f0;">' +
-      '<button class="draft-toggle" style="flex:1;border-top:none;" onclick="toggleDraft(\'' + dr.id + '\', this)">전체 보기</button>' +
-      '<button class="draft-toggle" style="flex:1;border-top:none;border-left:1px solid #f0f0f0;color:#000;font-weight:700;" onclick="openThreadPreview(\'' + dr.id + '\')">📱 Threads 미리보기</button>' +
-    '</div>' +
-  '</div>';
 }
 
-function toggleDraft(id, btn) {
-  const el = document.getElementById('draft-chain-' + id);
-  el.classList.toggle('expanded');
-  btn.textContent = el.classList.contains('expanded') ? '접기' : '전체 보기';
-}
+// ─── Trend Tab ────────────────────────────────────────────────────────────────
+async function loadTrend() {
+  state.trendLoaded = true;
+  const el = document.getElementById('trend-content');
 
-function copyChain(btn, id) {
-  const text = btn.previousElementSibling.textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    btn.classList.add('copied');
-    btn.textContent = '복사됨!';
-    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '복사'; }, 1500);
+  const today = new Date();
+  const dates = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    dates.push(d.toISOString().slice(0, 10));
+  }
+
+  const kwMap = {}; // term → {total, byDate: {date: count}}
+
+  await Promise.allSettled(dates.map(async date => {
+    let data = state.keywordsCache[date];
+    if (!data) {
+      try {
+        const res = await fetch(`/data/keywords/${date}.json`);
+        if (res.ok) { data = await res.json(); state.keywordsCache[date] = data; }
+      } catch(e) { return; }
+    }
+    if (!data) return;
+    const rooms = data.rooms || {};
+    Object.values(rooms).forEach(room => {
+      (room.unigrams || []).forEach(({term, count}) => {
+        if (!kwMap[term]) kwMap[term] = {total: 0, byDate: {}};
+        kwMap[term].total += count;
+        kwMap[term].byDate[date] = (kwMap[term].byDate[date] || 0) + count;
+      });
+    });
+  }));
+
+  const sorted = Object.entries(kwMap).sort((a, b) => b[1].total - a[1].total).slice(0, 10);
+  if (!sorted.length) {
+    el.innerHTML = `<div class="empty-state"><div class="icon">📊</div><div>최근 7일 키워드 데이터가 없습니다.</div></div>`;
+    return;
+  }
+
+  const maxTotal = sorted[0][1].total || 1;
+  const yesterday = dates[dates.length - 1];
+  const weekAvgDivisor = Math.max(dates.length - 1, 1);
+
+  // Bar chart
+  let html = `<div class="trend-section"><div class="trend-title">상위 10 키워드 (최근 7일)</div><div class="bar-chart">`;
+  sorted.forEach(([term, info]) => {
+    const pct = Math.round((info.total / maxTotal) * 100);
+    const yesterdayCount = info.byDate[yesterday] || 0;
+    const weekAvg = (info.total - yesterdayCount) / weekAvgDivisor;
+    const isHot = weekAvg > 0 && yesterdayCount >= weekAvg * 2;
+    const showCount = pct > 12;
+    html += `
+      <div class="bar-row">
+        <div class="bar-label" title="${esc(term)}">${esc(term)}</div>
+        <div class="bar-track">
+          <div class="bar-fill${isHot ? ' hot' : ''}" style="width:${pct}%">
+            ${showCount ? `<span class="bar-count">${info.total}</span>` : ''}
+          </div>
+        </div>
+        ${!showCount ? `<span class="bar-count outside">${info.total}</span>` : ''}
+        ${isHot ? `<span class="fire-badge" title="급상승">🔥</span>` : ''}
+      </div>`;
   });
-}
+  html += `</div></div>`;
 
-function toggleSection(header) {
-  header.parentElement.classList.toggle('collapsed');
-}
+  // Table
+  html += `<div class="trend-section"><div class="trend-title">7일 추이</div>
+    <div style="overflow-x:auto">
+    <table class="trend-table">
+      <thead><tr>
+        <th>키워드</th>`;
+  dates.forEach(d => { html += `<th>${d.slice(5)}</th>`; });
+  html += `<th>합계</th></tr></thead><tbody>`;
 
-function toggleThread(btn) {
-  const thread = btn.nextElementSibling;
-  thread.classList.toggle('open');
-  btn.textContent = thread.classList.contains('open') ? '스레드 앵글 닫기' : '스레드 앵글 보기';
-}
-
-// Thread preview modal
-let currentDrafts = [];
-function openThreadPreview(draftId) {
-  const dataStr = document.querySelector('[data-drafts]');
-  // find draft from last loaded data
-  if (!window._lastData || !window._lastData.thread_drafts) return;
-  const dr = window._lastData.thread_drafts.find(d => d.id === draftId);
-  if (!dr) return;
-  const chain = dr.chain || [];
-  const labels = {hook:'첫 글', body:'답글', cta:'마무리'};
-  const typeLabels = {hook:'HOOK', body:'BODY', cta:'CTA'};
-  let html = '';
-  chain.forEach((p, i) => {
-    const chars = p.text.length;
-    const isLast = i === chain.length - 1;
-    html += '<div class="thread-post">' +
-      '<div class="thread-avatar-col">' +
-        '<div class="thread-avatar">B</div>' +
-        (!isLast ? '<div class="thread-line"></div>' : '') +
-      '</div>' +
-      '<div class="thread-content">' +
-        '<span class="thread-username">bbojjaki_ai</span>' +
-        '<span class="thread-time">' + (labels[p.type] || '') + '</span>' +
-        '<span class="thread-type-badge ' + p.type + '">' + (typeLabels[p.type] || '') + '</span>' +
-        '<div class="thread-text">' + esc(p.text) + '</div>' +
-        '<div class="thread-chars' + (chars > 500 ? ' warn' : '') + '">' + chars + '자' + (chars > 500 ? ' ⚠️ 500자 초과!' : '') + '</div>' +
-      '</div>' +
-    '</div>';
+  sorted.forEach(([term, info]) => {
+    const yesterdayCount = info.byDate[yesterday] || 0;
+    const weekAvg = (info.total - yesterdayCount) / weekAvgDivisor;
+    const isHot = weekAvg > 0 && yesterdayCount >= weekAvg * 2;
+    html += `<tr><td class="kw-cell">${esc(term)}${isHot ? ' 🔥' : ''}</td>`;
+    dates.forEach(d => { html += `<td>${info.byDate[d] || 0}</td>`; });
+    html += `<td><strong>${info.total}</strong></td></tr>`;
   });
-  document.getElementById('thread-mock-body').innerHTML = html;
-  document.getElementById('thread-modal').classList.add('open');
-  window._currentChain = chain;
+  html += `</tbody></table></div></div>`;
+  el.innerHTML = html;
 }
 
-function closeModal() {
-  document.getElementById('thread-modal').classList.remove('open');
+// ─── Utils ────────────────────────────────────────────────────────────────────
+function esc(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-function copyAllThread() {
-  if (!window._currentChain) return;
-  const text = window._currentChain.map((p,i) => {
-    const label = i === 0 ? '[첫 글]' : '[답글 ' + i + ']';
-    return label + '\n' + p.text;
-  }).join('\n\n---\n\n');
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.modal-btn.primary');
-    btn.textContent = '복사 완료!';
-    setTimeout(() => { btn.textContent = '전체 복사'; }, 1500);
-  });
-}
-
-// Date navigation
-document.getElementById('date-picker').addEventListener('change', e => { currentDate = e.target.value; loadDate(currentDate); });
-document.getElementById('prev-day').addEventListener('click', () => {
-  const d = new Date(currentDate); d.setDate(d.getDate()-1);
-  currentDate = d.toISOString().slice(0,10);
-  document.getElementById('date-picker').value = currentDate; loadDate(currentDate);
-});
-document.getElementById('next-day').addEventListener('click', () => {
-  const d = new Date(currentDate); d.setDate(d.getDate()+1);
-  currentDate = d.toISOString().slice(0,10);
-  document.getElementById('date-picker').value = currentDate; loadDate(currentDate);
-});
-
-init();
+// ─── Init ─────────────────────────────────────────────────────────────────────
+loadToday();
 </script>
 </body>
 </html>

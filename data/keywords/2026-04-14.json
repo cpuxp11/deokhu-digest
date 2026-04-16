@@ -1,0 +1,1219 @@
+{
+  "date": "2026-04-14",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [
+        {
+          "term": "ai",
+          "count": 43
+        },
+        {
+          "term": "오픈클로",
+          "count": 37
+        },
+        {
+          "term": "헤르메스",
+          "count": 24
+        },
+        {
+          "term": "링크",
+          "count": 24
+        },
+        {
+          "term": "웨비나",
+          "count": 22
+        },
+        {
+          "term": "분들",
+          "count": 18
+        },
+        {
+          "term": "저도",
+          "count": 18
+        },
+        {
+          "term": "에이전트",
+          "count": 17
+        },
+        {
+          "term": "클로드",
+          "count": 17
+        },
+        {
+          "term": "로컬",
+          "count": 15
+        },
+        {
+          "term": "openclaw",
+          "count": 15
+        },
+        {
+          "term": "영상",
+          "count": 14
+        },
+        {
+          "term": "api",
+          "count": 14
+        },
+        {
+          "term": "파일",
+          "count": 13
+        },
+        {
+          "term": "옵시디언",
+          "count": 13
+        },
+        {
+          "term": "코난쌤",
+          "count": 13
+        },
+        {
+          "term": "같아",
+          "count": 13
+        },
+        {
+          "term": "좋아",
+          "count": 12
+        },
+        {
+          "term": "텔레그램",
+          "count": 12
+        },
+        {
+          "term": "답변",
+          "count": 12
+        },
+        {
+          "term": "감사합니",
+          "count": 12
+        },
+        {
+          "term": "설명",
+          "count": 12
+        },
+        {
+          "term": "코덱스",
+          "count": 12
+        },
+        {
+          "term": "무료",
+          "count": 12
+        },
+        {
+          "term": "신청",
+          "count": 12
+        },
+        {
+          "term": "서사",
+          "count": 12
+        },
+        {
+          "term": "에르메스",
+          "count": 11
+        },
+        {
+          "term": "볼만한지",
+          "count": 11
+        },
+        {
+          "term": "메모",
+          "count": 11
+        },
+        {
+          "term": "비용",
+          "count": 11
+        },
+        {
+          "term": "토큰",
+          "count": 11
+        },
+        {
+          "term": "9시",
+          "count": 11
+        },
+        {
+          "term": "온라인",
+          "count": 11
+        },
+        {
+          "term": "참여",
+          "count": 11
+        },
+        {
+          "term": "자신",
+          "count": 10
+        },
+        {
+          "term": "실무",
+          "count": 10
+        },
+        {
+          "term": "다시",
+          "count": 10
+        },
+        {
+          "term": "강의",
+          "count": 10
+        },
+        {
+          "term": "내용",
+          "count": 10
+        },
+        {
+          "term": "이건",
+          "count": 10
+        },
+        {
+          "term": "스터디",
+          "count": 10
+        },
+        {
+          "term": "모델",
+          "count": 9
+        },
+        {
+          "term": "했습니",
+          "count": 9
+        },
+        {
+          "term": "클로드코드",
+          "count": 9
+        },
+        {
+          "term": "생각",
+          "count": 9
+        },
+        {
+          "term": "테스트",
+          "count": 9
+        },
+        {
+          "term": "봇들",
+          "count": 9
+        },
+        {
+          "term": "gpt",
+          "count": 9
+        },
+        {
+          "term": "입장",
+          "count": 9
+        },
+        {
+          "term": "될까",
+          "count": 8
+        },
+        {
+          "term": "이름",
+          "count": 8
+        },
+        {
+          "term": "사용하",
+          "count": 8
+        },
+        {
+          "term": "슬랙",
+          "count": 8
+        },
+        {
+          "term": "뽀짝",
+          "count": 8
+        },
+        {
+          "term": "서로",
+          "count": 8
+        },
+        {
+          "term": "소개됐",
+          "count": 8
+        },
+        {
+          "term": "권한",
+          "count": 8
+        },
+        {
+          "term": "코드",
+          "count": 8
+        },
+        {
+          "term": "세션",
+          "count": 8
+        },
+        {
+          "term": "대화",
+          "count": 8
+        },
+        {
+          "term": "문제",
+          "count": 8
+        },
+        {
+          "term": "만들",
+          "count": 8
+        },
+        {
+          "term": "컨텍스트",
+          "count": 8
+        },
+        {
+          "term": "있습니",
+          "count": 8
+        },
+        {
+          "term": "glm",
+          "count": 8
+        },
+        {
+          "term": "혼자",
+          "count": 8
+        },
+        {
+          "term": "일하",
+          "count": 8
+        },
+        {
+          "term": "멀티에이전트",
+          "count": 8
+        },
+        {
+          "term": "한준구",
+          "count": 8
+        },
+        {
+          "term": "실전",
+          "count": 8
+        },
+        {
+          "term": "밋업",
+          "count": 8
+        },
+        {
+          "term": "얼리버드",
+          "count": 8
+        },
+        {
+          "term": "고클로",
+          "count": 8
+        },
+        {
+          "term": "설정",
+          "count": 7
+        },
+        {
+          "term": "아니라",
+          "count": 7
+        },
+        {
+          "term": "vs",
+          "count": 7
+        },
+        {
+          "term": "이렇게",
+          "count": 7
+        },
+        {
+          "term": "어디",
+          "count": 7
+        },
+        {
+          "term": "바로",
+          "count": 7
+        },
+        {
+          "term": "서비스",
+          "count": 7
+        },
+        {
+          "term": "검색",
+          "count": 7
+        },
+        {
+          "term": "자동화",
+          "count": 7
+        },
+        {
+          "term": "운영",
+          "count": 7
+        },
+        {
+          "term": "작업",
+          "count": 7
+        },
+        {
+          "term": "위해",
+          "count": 7
+        },
+        {
+          "term": "4월",
+          "count": 7
+        },
+        {
+          "term": "워크스페이스",
+          "count": 7
+        },
+        {
+          "term": "pro",
+          "count": 7
+        },
+        {
+          "term": "그리",
+          "count": 7
+        },
+        {
+          "term": "내가",
+          "count": 7
+        },
+        {
+          "term": "그걸",
+          "count": 7
+        },
+        {
+          "term": "저한테",
+          "count": 7
+        },
+        {
+          "term": "애들",
+          "count": 6
+        },
+        {
+          "term": "안되",
+          "count": 6
+        },
+        {
+          "term": "안내",
+          "count": 6
+        },
+        {
+          "term": "자체",
+          "count": 6
+        },
+        {
+          "term": "공유",
+          "count": 6
+        },
+        {
+          "term": "도구",
+          "count": 6
+        },
+        {
+          "term": "llm",
+          "count": 6
+        },
+        {
+          "term": "mcp",
+          "count": 6
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "링크 영상",
+          "count": 11
+        },
+        {
+          "term": "영상 설명",
+          "count": 11
+        },
+        {
+          "term": "실무 메모",
+          "count": 10
+        },
+        {
+          "term": "봇들 혼자",
+          "count": 8
+        },
+        {
+          "term": "혼자 일하",
+          "count": 8
+        },
+        {
+          "term": "클로드 코드",
+          "count": 6
+        },
+        {
+          "term": "gpt pro",
+          "count": 6
+        },
+        {
+          "term": "ai 자신",
+          "count": 6
+        },
+        {
+          "term": "자신 논리적",
+          "count": 6
+        },
+        {
+          "term": "웨비나 안내",
+          "count": 5
+        },
+        {
+          "term": "무료 ai",
+          "count": 4
+        },
+        {
+          "term": "ai 토크",
+          "count": 4
+        },
+        {
+          "term": "토크 웨비나",
+          "count": 4
+        },
+        {
+          "term": "일하 openclaw",
+          "count": 4
+        },
+        {
+          "term": "openclaw 멀티에이전트",
+          "count": 4
+        },
+        {
+          "term": "멀티에이전트 세계",
+          "count": 4
+        },
+        {
+          "term": "세계 4월",
+          "count": 4
+        },
+        {
+          "term": "4월 14일",
+          "count": 4
+        },
+        {
+          "term": "14일 9시",
+          "count": 4
+        },
+        {
+          "term": "9시 10시",
+          "count": 4
+        },
+        {
+          "term": "10시 연사",
+          "count": 4
+        },
+        {
+          "term": "연사 한준구",
+          "count": 4
+        },
+        {
+          "term": "한준구 코난쌤",
+          "count": 4
+        },
+        {
+          "term": "코난쌤 멀티에이전트",
+          "count": 4
+        },
+        {
+          "term": "멀티에이전트 실전",
+          "count": 4
+        },
+        {
+          "term": "실전 활용자",
+          "count": 4
+        },
+        {
+          "term": "활용자 무료",
+          "count": 4
+        },
+        {
+          "term": "무료 다루",
+          "count": 4
+        },
+        {
+          "term": "다루 내용",
+          "count": 4
+        },
+        {
+          "term": "내용 서브에이전트",
+          "count": 4
+        },
+        {
+          "term": "서브에이전트 vs",
+          "count": 4
+        },
+        {
+          "term": "vs 독립에이전트",
+          "count": 4
+        },
+        {
+          "term": "독립에이전트 여러",
+          "count": 4
+        },
+        {
+          "term": "여러 협업시키",
+          "count": 4
+        },
+        {
+          "term": "협업시키 워크스페이스",
+          "count": 4
+        },
+        {
+          "term": "워크스페이스 분리",
+          "count": 4
+        },
+        {
+          "term": "분리 운영",
+          "count": 4
+        },
+        {
+          "term": "운영 노하우",
+          "count": 4
+        },
+        {
+          "term": "노하우 초급",
+          "count": 4
+        },
+        {
+          "term": "초급 중급",
+          "count": 4
+        },
+        {
+          "term": "중급 단계별",
+          "count": 4
+        },
+        {
+          "term": "단계별 실전",
+          "count": 4
+        },
+        {
+          "term": "실전 신청",
+          "count": 4
+        },
+        {
+          "term": "신청 링크",
+          "count": 4
+        },
+        {
+          "term": "llm wiki",
+          "count": 4
+        },
+        {
+          "term": "저한테 개인채팅",
+          "count": 4
+        },
+        {
+          "term": "다시 들어와주세",
+          "count": 4
+        },
+        {
+          "term": "코난쌤 한준구",
+          "count": 4
+        },
+        {
+          "term": "오래하신분들 많죠",
+          "count": 4
+        },
+        {
+          "term": "많죠 보이세",
+          "count": 4
+        }
+      ],
+      "total_messages": 478
+    },
+    "초보방": {
+      "unigrams": [
+        {
+          "term": "openclaw",
+          "count": 14
+        },
+        {
+          "term": "클로드",
+          "count": 14
+        },
+        {
+          "term": "오픈클로",
+          "count": 13
+        },
+        {
+          "term": "신청",
+          "count": 12
+        },
+        {
+          "term": "무료",
+          "count": 11
+        },
+        {
+          "term": "방법",
+          "count": 11
+        },
+        {
+          "term": "크롤링",
+          "count": 10
+        },
+        {
+          "term": "md",
+          "count": 9
+        },
+        {
+          "term": "9시",
+          "count": 8
+        },
+        {
+          "term": "ai",
+          "count": 8
+        },
+        {
+          "term": "웨비나",
+          "count": 8
+        },
+        {
+          "term": "멀티에이전트",
+          "count": 8
+        },
+        {
+          "term": "4월",
+          "count": 8
+        },
+        {
+          "term": "연사",
+          "count": 8
+        },
+        {
+          "term": "실전",
+          "count": 8
+        },
+        {
+          "term": "운영",
+          "count": 8
+        },
+        {
+          "term": "자정",
+          "count": 8
+        },
+        {
+          "term": "마감",
+          "count": 8
+        },
+        {
+          "term": "밋업",
+          "count": 8
+        },
+        {
+          "term": "얼리버드",
+          "count": 8
+        },
+        {
+          "term": "현재",
+          "count": 7
+        },
+        {
+          "term": "api",
+          "count": 7
+        },
+        {
+          "term": "보통",
+          "count": 7
+        },
+        {
+          "term": "사람",
+          "count": 7
+        },
+        {
+          "term": "모델",
+          "count": 7
+        },
+        {
+          "term": "있습니",
+          "count": 7
+        },
+        {
+          "term": "구글",
+          "count": 7
+        },
+        {
+          "term": "있어",
+          "count": 7
+        },
+        {
+          "term": "네이버",
+          "count": 7
+        },
+        {
+          "term": "봇들",
+          "count": 6
+        },
+        {
+          "term": "고민",
+          "count": 6
+        },
+        {
+          "term": "세션",
+          "count": 6
+        },
+        {
+          "term": "agent",
+          "count": 6
+        },
+        {
+          "term": "토큰",
+          "count": 6
+        },
+        {
+          "term": "원고",
+          "count": 6
+        },
+        {
+          "term": "스킬",
+          "count": 6
+        },
+        {
+          "term": "일단",
+          "count": 6
+        },
+        {
+          "term": "계속",
+          "count": 6
+        },
+        {
+          "term": "쓰는",
+          "count": 6
+        },
+        {
+          "term": "ai크롤링",
+          "count": 6
+        },
+        {
+          "term": "사실",
+          "count": 6
+        },
+        {
+          "term": "혼자",
+          "count": 5
+        },
+        {
+          "term": "일하",
+          "count": 5
+        },
+        {
+          "term": "코난쌤",
+          "count": 5
+        },
+        {
+          "term": "내용",
+          "count": 5
+        },
+        {
+          "term": "vs",
+          "count": 5
+        },
+        {
+          "term": "여러",
+          "count": 5
+        },
+        {
+          "term": "워크스페이스",
+          "count": 5
+        },
+        {
+          "term": "분리",
+          "count": 5
+        },
+        {
+          "term": "라이브",
+          "count": 5
+        },
+        {
+          "term": "매일",
+          "count": 5
+        },
+        {
+          "term": "코드",
+          "count": 5
+        },
+        {
+          "term": "새로",
+          "count": 5
+        },
+        {
+          "term": "source",
+          "count": 5
+        },
+        {
+          "term": "memory",
+          "count": 5
+        },
+        {
+          "term": "검색",
+          "count": 5
+        },
+        {
+          "term": "텔레그램",
+          "count": 4
+        },
+        {
+          "term": "토크",
+          "count": 4
+        },
+        {
+          "term": "안내",
+          "count": 4
+        },
+        {
+          "term": "세계",
+          "count": 4
+        },
+        {
+          "term": "14일",
+          "count": 4
+        },
+        {
+          "term": "10시",
+          "count": 4
+        },
+        {
+          "term": "한준구",
+          "count": 4
+        },
+        {
+          "term": "활용자",
+          "count": 4
+        },
+        {
+          "term": "다루",
+          "count": 4
+        },
+        {
+          "term": "서브에이전트",
+          "count": 4
+        },
+        {
+          "term": "독립에이전트",
+          "count": 4
+        },
+        {
+          "term": "협업시키",
+          "count": 4
+        },
+        {
+          "term": "노하우",
+          "count": 4
+        },
+        {
+          "term": "초급",
+          "count": 4
+        },
+        {
+          "term": "중급",
+          "count": 4
+        },
+        {
+          "term": "단계별",
+          "count": 4
+        },
+        {
+          "term": "링크",
+          "count": 4
+        },
+        {
+          "term": "day",
+          "count": 4
+        },
+        {
+          "term": "자랑하러",
+          "count": 4
+        },
+        {
+          "term": "오세",
+          "count": 4
+        },
+        {
+          "term": "번째",
+          "count": 4
+        },
+        {
+          "term": "오프라인",
+          "count": 4
+        },
+        {
+          "term": "당일",
+          "count": 4
+        },
+        {
+          "term": "이만큼",
+          "count": 4
+        },
+        {
+          "term": "챙겨가세",
+          "count": 4
+        },
+        {
+          "term": "한정",
+          "count": 4
+        },
+        {
+          "term": "굿즈",
+          "count": 4
+        },
+        {
+          "term": "핑거푸드",
+          "count": 4
+        },
+        {
+          "term": "음료",
+          "count": 4
+        },
+        {
+          "term": "맞춤형",
+          "count": 4
+        },
+        {
+          "term": "자동화",
+          "count": 4
+        },
+        {
+          "term": "레시피북",
+          "count": 4
+        },
+        {
+          "term": "증정",
+          "count": 4
+        },
+        {
+          "term": "사람들",
+          "count": 4
+        },
+        {
+          "term": "네트워킹",
+          "count": 4
+        },
+        {
+          "term": "현장",
+          "count": 4
+        },
+        {
+          "term": "프로그램",
+          "count": 4
+        },
+        {
+          "term": "실사용자",
+          "count": 4
+        },
+        {
+          "term": "시연",
+          "count": 4
+        },
+        {
+          "term": "송다혜",
+          "count": 4
+        },
+        {
+          "term": "키노트",
+          "count": 4
+        },
+        {
+          "term": "온라인",
+          "count": 4
+        },
+        {
+          "term": "미공개",
+          "count": 4
+        },
+        {
+          "term": "초청",
+          "count": 4
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "봇들 혼자",
+          "count": 5
+        },
+        {
+          "term": "혼자 일하",
+          "count": 5
+        },
+        {
+          "term": "분리 운영",
+          "count": 5
+        },
+        {
+          "term": "source memory",
+          "count": 5
+        },
+        {
+          "term": "memory md",
+          "count": 5
+        },
+        {
+          "term": "무료 ai",
+          "count": 4
+        },
+        {
+          "term": "ai 토크",
+          "count": 4
+        },
+        {
+          "term": "토크 웨비나",
+          "count": 4
+        },
+        {
+          "term": "웨비나 안내",
+          "count": 4
+        },
+        {
+          "term": "일하 openclaw",
+          "count": 4
+        },
+        {
+          "term": "openclaw 멀티에이전트",
+          "count": 4
+        },
+        {
+          "term": "멀티에이전트 세계",
+          "count": 4
+        },
+        {
+          "term": "세계 4월",
+          "count": 4
+        },
+        {
+          "term": "4월 14일",
+          "count": 4
+        },
+        {
+          "term": "14일 9시",
+          "count": 4
+        },
+        {
+          "term": "9시 10시",
+          "count": 4
+        },
+        {
+          "term": "10시 연사",
+          "count": 4
+        },
+        {
+          "term": "연사 한준구",
+          "count": 4
+        },
+        {
+          "term": "한준구 코난쌤",
+          "count": 4
+        },
+        {
+          "term": "코난쌤 멀티에이전트",
+          "count": 4
+        },
+        {
+          "term": "멀티에이전트 실전",
+          "count": 4
+        },
+        {
+          "term": "실전 활용자",
+          "count": 4
+        },
+        {
+          "term": "활용자 무료",
+          "count": 4
+        },
+        {
+          "term": "무료 다루",
+          "count": 4
+        },
+        {
+          "term": "다루 내용",
+          "count": 4
+        },
+        {
+          "term": "내용 서브에이전트",
+          "count": 4
+        },
+        {
+          "term": "서브에이전트 vs",
+          "count": 4
+        },
+        {
+          "term": "vs 독립에이전트",
+          "count": 4
+        },
+        {
+          "term": "독립에이전트 여러",
+          "count": 4
+        },
+        {
+          "term": "여러 협업시키",
+          "count": 4
+        },
+        {
+          "term": "협업시키 워크스페이스",
+          "count": 4
+        },
+        {
+          "term": "워크스페이스 분리",
+          "count": 4
+        },
+        {
+          "term": "운영 노하우",
+          "count": 4
+        },
+        {
+          "term": "노하우 초급",
+          "count": 4
+        },
+        {
+          "term": "초급 중급",
+          "count": 4
+        },
+        {
+          "term": "중급 단계별",
+          "count": 4
+        },
+        {
+          "term": "단계별 실전",
+          "count": 4
+        },
+        {
+          "term": "실전 신청",
+          "count": 4
+        },
+        {
+          "term": "신청 링크",
+          "count": 4
+        },
+        {
+          "term": "자정 마감",
+          "count": 4
+        },
+        {
+          "term": "마감 밋업",
+          "count": 4
+        },
+        {
+          "term": "밋업 얼리버드",
+          "count": 4
+        },
+        {
+          "term": "얼리버드 day",
+          "count": 4
+        },
+        {
+          "term": "day 자랑하러",
+          "count": 4
+        },
+        {
+          "term": "자랑하러 오세",
+          "count": 4
+        },
+        {
+          "term": "오세 openclaw",
+          "count": 4
+        },
+        {
+          "term": "openclaw 번째",
+          "count": 4
+        },
+        {
+          "term": "번째 오프라인",
+          "count": 4
+        },
+        {
+          "term": "오프라인 밋업",
+          "count": 4
+        },
+        {
+          "term": "밋업 당일",
+          "count": 4
+        }
+      ],
+      "total_messages": 120
+    }
+  }
+}

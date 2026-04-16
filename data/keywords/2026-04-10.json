@@ -1,0 +1,1219 @@
+{
+  "date": "2026-04-10",
+  "rooms": {
+    "덕후방": {
+      "unigrams": [
+        {
+          "term": "오픈클로",
+          "count": 8
+        },
+        {
+          "term": "9시",
+          "count": 6
+        },
+        {
+          "term": "나한테",
+          "count": 6
+        },
+        {
+          "term": "맞을지",
+          "count": 6
+        },
+        {
+          "term": "분들께",
+          "count": 6
+        },
+        {
+          "term": "웨비나",
+          "count": 4
+        },
+        {
+          "term": "이벤트",
+          "count": 4
+        },
+        {
+          "term": "m5",
+          "count": 4
+        },
+        {
+          "term": "무료",
+          "count": 3
+        },
+        {
+          "term": "진행합니",
+          "count": 3
+        },
+        {
+          "term": "주제",
+          "count": 3
+        },
+        {
+          "term": "nanoclaw",
+          "count": 3
+        },
+        {
+          "term": "vs",
+          "count": 3
+        },
+        {
+          "term": "openclaw",
+          "count": 3
+        },
+        {
+          "term": "나에게",
+          "count": 3
+        },
+        {
+          "term": "맞는",
+          "count": 3
+        },
+        {
+          "term": "설치형",
+          "count": 3
+        },
+        {
+          "term": "클라우드형",
+          "count": 3
+        },
+        {
+          "term": "헷갈렸던",
+          "count": 3
+        },
+        {
+          "term": "도움될",
+          "count": 3
+        },
+        {
+          "term": "내용이에",
+          "count": 3
+        },
+        {
+          "term": "연사",
+          "count": 3
+        },
+        {
+          "term": "박정기",
+          "count": 3
+        },
+        {
+          "term": "시간",
+          "count": 3
+        },
+        {
+          "term": "10시",
+          "count": 3
+        },
+        {
+          "term": "바로",
+          "count": 3
+        },
+        {
+          "term": "신청해보세",
+          "count": 3
+        },
+        {
+          "term": "참여하시",
+          "count": 3
+        },
+        {
+          "term": "특별한",
+          "count": 3
+        },
+        {
+          "term": "준비되어",
+          "count": 3
+        },
+        {
+          "term": "있으",
+          "count": 3
+        },
+        {
+          "term": "기대하세",
+          "count": 3
+        },
+        {
+          "term": "세션",
+          "count": 3
+        },
+        {
+          "term": "ai스터디",
+          "count": 3
+        },
+        {
+          "term": "운영",
+          "count": 3
+        },
+        {
+          "term": "지피티",
+          "count": 3
+        },
+        {
+          "term": "사용량",
+          "count": 3
+        },
+        {
+          "term": "관심",
+          "count": 2
+        },
+        {
+          "term": "슬랙",
+          "count": 2
+        },
+        {
+          "term": "에이전트",
+          "count": 2
+        },
+        {
+          "term": "봇이",
+          "count": 2
+        },
+        {
+          "term": "들어갈때",
+          "count": 2
+        },
+        {
+          "term": "글이",
+          "count": 2
+        },
+        {
+          "term": "써지",
+          "count": 2
+        },
+        {
+          "term": "지피터스",
+          "count": 2
+        },
+        {
+          "term": "업무",
+          "count": 2
+        },
+        {
+          "term": "기획",
+          "count": 2
+        },
+        {
+          "term": "스터디장",
+          "count": 2
+        },
+        {
+          "term": "즐거운",
+          "count": 2
+        },
+        {
+          "term": "강의",
+          "count": 2
+        },
+        {
+          "term": "경험",
+          "count": 2
+        },
+        {
+          "term": "사람",
+          "count": 2
+        },
+        {
+          "term": "있습니",
+          "count": 2
+        },
+        {
+          "term": "가능한가",
+          "count": 2
+        },
+        {
+          "term": "plus",
+          "count": 2
+        },
+        {
+          "term": "안녕하세",
+          "count": 2
+        },
+        {
+          "term": "입력중",
+          "count": 2
+        },
+        {
+          "term": "인디케이터",
+          "count": 2
+        },
+        {
+          "term": "뜨나",
+          "count": 2
+        },
+        {
+          "term": "특정",
+          "count": 2
+        },
+        {
+          "term": "15분전",
+          "count": 1
+        },
+        {
+          "term": "뽀피터스팀",
+          "count": 1
+        },
+        {
+          "term": "sns",
+          "count": 1
+        },
+        {
+          "term": "새로",
+          "count": 1
+        },
+        {
+          "term": "만들었어",
+          "count": 1
+        },
+        {
+          "term": "소식",
+          "count": 1
+        },
+        {
+          "term": "실험",
+          "count": 1
+        },
+        {
+          "term": "밋업",
+          "count": 1
+        },
+        {
+          "term": "이야기",
+          "count": 1
+        },
+        {
+          "term": "올릴",
+          "count": 1
+        },
+        {
+          "term": "예정",
+          "count": 1
+        },
+        {
+          "term": "있으시면",
+          "count": 1
+        },
+        {
+          "term": "팔로우",
+          "count": 1
+        },
+        {
+          "term": "해주세",
+          "count": 1
+        },
+        {
+          "term": "인스타",
+          "count": 1
+        },
+        {
+          "term": "스레드",
+          "count": 1
+        },
+        {
+          "term": "안드로이드",
+          "count": 1
+        },
+        {
+          "term": "앱인가",
+          "count": 1
+        },
+        {
+          "term": "슬랙에",
+          "count": 1
+        },
+        {
+          "term": "연결했을때",
+          "count": 1
+        },
+        {
+          "term": "세션에",
+          "count": 1
+        },
+        {
+          "term": "남긴",
+          "count": 1
+        },
+        {
+          "term": "댓글이",
+          "count": 1
+        },
+        {
+          "term": "댓글",
+          "count": 1
+        },
+        {
+          "term": "다시",
+          "count": 1
+        },
+        {
+          "term": "계세",
+          "count": 1
+        },
+        {
+          "term": "기존",
+          "count": 1
+        },
+        {
+          "term": "대화",
+          "count": 1
+        },
+        {
+          "term": "고정되어",
+          "count": 1
+        },
+        {
+          "term": "있지",
+          "count": 1
+        },
+        {
+          "term": "않고",
+          "count": 1
+        },
+        {
+          "term": "동일한",
+          "count": 1
+        },
+        {
+          "term": "내용",
+          "count": 1
+        },
+        {
+          "term": "애니메이션",
+          "count": 1
+        },
+        {
+          "term": "효과",
+          "count": 1
+        },
+        {
+          "term": "써짐",
+          "count": 1
+        },
+        {
+          "term": "설정",
+          "count": 1
+        },
+        {
+          "term": "잘못한걸까",
+          "count": 1
+        },
+        {
+          "term": "학습한거랑",
+          "count": 1
+        },
+        {
+          "term": "저장된",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "나한테 맞을지",
+          "count": 6
+        },
+        {
+          "term": "9시 오픈클로",
+          "count": 3
+        },
+        {
+          "term": "오픈클로 무료",
+          "count": 3
+        },
+        {
+          "term": "무료 웨비나",
+          "count": 3
+        },
+        {
+          "term": "웨비나 진행합니",
+          "count": 3
+        },
+        {
+          "term": "진행합니 주제",
+          "count": 3
+        },
+        {
+          "term": "주제 nanoclaw",
+          "count": 3
+        },
+        {
+          "term": "nanoclaw vs",
+          "count": 3
+        },
+        {
+          "term": "vs openclaw",
+          "count": 3
+        },
+        {
+          "term": "openclaw 나에게",
+          "count": 3
+        },
+        {
+          "term": "나에게 맞는",
+          "count": 3
+        },
+        {
+          "term": "맞는 설치형",
+          "count": 3
+        },
+        {
+          "term": "설치형 나한테",
+          "count": 3
+        },
+        {
+          "term": "맞을지 클라우드형",
+          "count": 3
+        },
+        {
+          "term": "클라우드형 나한테",
+          "count": 3
+        },
+        {
+          "term": "맞을지 헷갈렸던",
+          "count": 3
+        },
+        {
+          "term": "헷갈렸던 분들께",
+          "count": 3
+        },
+        {
+          "term": "분들께 도움될",
+          "count": 3
+        },
+        {
+          "term": "도움될 내용이에",
+          "count": 3
+        },
+        {
+          "term": "내용이에 연사",
+          "count": 3
+        },
+        {
+          "term": "연사 박정기",
+          "count": 3
+        },
+        {
+          "term": "박정기 시간",
+          "count": 3
+        },
+        {
+          "term": "시간 9시",
+          "count": 3
+        },
+        {
+          "term": "9시 10시",
+          "count": 3
+        },
+        {
+          "term": "10시 바로",
+          "count": 3
+        },
+        {
+          "term": "바로 신청해보세",
+          "count": 3
+        },
+        {
+          "term": "신청해보세 참여하시",
+          "count": 3
+        },
+        {
+          "term": "참여하시 분들께",
+          "count": 3
+        },
+        {
+          "term": "분들께 특별한",
+          "count": 3
+        },
+        {
+          "term": "특별한 이벤트",
+          "count": 3
+        },
+        {
+          "term": "이벤트 준비되어",
+          "count": 3
+        },
+        {
+          "term": "준비되어 있으",
+          "count": 3
+        },
+        {
+          "term": "있으 기대하세",
+          "count": 3
+        },
+        {
+          "term": "세션 들어갈때",
+          "count": 2
+        },
+        {
+          "term": "15분전 9시",
+          "count": 1
+        },
+        {
+          "term": "뽀피터스팀 sns",
+          "count": 1
+        },
+        {
+          "term": "sns 새로",
+          "count": 1
+        },
+        {
+          "term": "새로 만들었어",
+          "count": 1
+        },
+        {
+          "term": "만들었어 오픈클로",
+          "count": 1
+        },
+        {
+          "term": "오픈클로 소식",
+          "count": 1
+        },
+        {
+          "term": "소식 실험",
+          "count": 1
+        },
+        {
+          "term": "실험 웨비나",
+          "count": 1
+        },
+        {
+          "term": "웨비나 밋업",
+          "count": 1
+        },
+        {
+          "term": "밋업 이야기",
+          "count": 1
+        },
+        {
+          "term": "이야기 올릴",
+          "count": 1
+        },
+        {
+          "term": "올릴 예정",
+          "count": 1
+        },
+        {
+          "term": "예정 관심",
+          "count": 1
+        },
+        {
+          "term": "관심 있으시면",
+          "count": 1
+        },
+        {
+          "term": "있으시면 팔로우",
+          "count": 1
+        },
+        {
+          "term": "팔로우 해주세",
+          "count": 1
+        }
+      ],
+      "total_messages": 54
+    },
+    "초보방": {
+      "unigrams": [
+        {
+          "term": "슬랙",
+          "count": 6
+        },
+        {
+          "term": "9시",
+          "count": 4
+        },
+        {
+          "term": "오픈클로",
+          "count": 4
+        },
+        {
+          "term": "웨비나",
+          "count": 4
+        },
+        {
+          "term": "나한테",
+          "count": 4
+        },
+        {
+          "term": "맞을지",
+          "count": 4
+        },
+        {
+          "term": "분들께",
+          "count": 4
+        },
+        {
+          "term": "안녕하세",
+          "count": 4
+        },
+        {
+          "term": "nanoclaw",
+          "count": 3
+        },
+        {
+          "term": "vs",
+          "count": 3
+        },
+        {
+          "term": "openclaw",
+          "count": 3
+        },
+        {
+          "term": "나에게",
+          "count": 3
+        },
+        {
+          "term": "맞는",
+          "count": 3
+        },
+        {
+          "term": "특별한",
+          "count": 3
+        },
+        {
+          "term": "문자",
+          "count": 3
+        },
+        {
+          "term": "병렬로",
+          "count": 3
+        },
+        {
+          "term": "슬랙에",
+          "count": 3
+        },
+        {
+          "term": "업무",
+          "count": 3
+        },
+        {
+          "term": "skill",
+          "count": 3
+        },
+        {
+          "term": "채널",
+          "count": 3
+        },
+        {
+          "term": "안녕",
+          "count": 3
+        },
+        {
+          "term": "무료",
+          "count": 2
+        },
+        {
+          "term": "진행합니",
+          "count": 2
+        },
+        {
+          "term": "주제",
+          "count": 2
+        },
+        {
+          "term": "설치형",
+          "count": 2
+        },
+        {
+          "term": "클라우드형",
+          "count": 2
+        },
+        {
+          "term": "헷갈렸던",
+          "count": 2
+        },
+        {
+          "term": "도움될",
+          "count": 2
+        },
+        {
+          "term": "내용이에",
+          "count": 2
+        },
+        {
+          "term": "연사",
+          "count": 2
+        },
+        {
+          "term": "박정기",
+          "count": 2
+        },
+        {
+          "term": "시간",
+          "count": 2
+        },
+        {
+          "term": "10시",
+          "count": 2
+        },
+        {
+          "term": "바로",
+          "count": 2
+        },
+        {
+          "term": "신청해보세",
+          "count": 2
+        },
+        {
+          "term": "참여하시",
+          "count": 2
+        },
+        {
+          "term": "이벤트",
+          "count": 2
+        },
+        {
+          "term": "준비되어",
+          "count": 2
+        },
+        {
+          "term": "있으",
+          "count": 2
+        },
+        {
+          "term": "기대하세",
+          "count": 2
+        },
+        {
+          "term": "이야기",
+          "count": 2
+        },
+        {
+          "term": "스레드",
+          "count": 2
+        },
+        {
+          "term": "것도",
+          "count": 2
+        },
+        {
+          "term": "궁금해",
+          "count": 2
+        },
+        {
+          "term": "ktx",
+          "count": 2
+        },
+        {
+          "term": "에이전트",
+          "count": 2
+        },
+        {
+          "term": "세팅",
+          "count": 2
+        },
+        {
+          "term": "텔래그램",
+          "count": 2
+        },
+        {
+          "term": "타타님",
+          "count": 2
+        },
+        {
+          "term": "맥미니",
+          "count": 2
+        },
+        {
+          "term": "사용하",
+          "count": 2
+        },
+        {
+          "term": "지피터스",
+          "count": 2
+        },
+        {
+          "term": "텔레그램",
+          "count": 2
+        },
+        {
+          "term": "시키",
+          "count": 2
+        },
+        {
+          "term": "하는거",
+          "count": 2
+        },
+        {
+          "term": "시키려면",
+          "count": 2
+        },
+        {
+          "term": "디스코드",
+          "count": 2
+        },
+        {
+          "term": "젠스파크",
+          "count": 2
+        },
+        {
+          "term": "대화",
+          "count": 2
+        },
+        {
+          "term": "이걸",
+          "count": 2
+        },
+        {
+          "term": "텔레그램에",
+          "count": 2
+        },
+        {
+          "term": "초롱",
+          "count": 2
+        },
+        {
+          "term": "15분전",
+          "count": 1
+        },
+        {
+          "term": "15분",
+          "count": 1
+        },
+        {
+          "term": "뽀피터스팀",
+          "count": 1
+        },
+        {
+          "term": "sns",
+          "count": 1
+        },
+        {
+          "term": "새로",
+          "count": 1
+        },
+        {
+          "term": "만들었어",
+          "count": 1
+        },
+        {
+          "term": "소식",
+          "count": 1
+        },
+        {
+          "term": "실험",
+          "count": 1
+        },
+        {
+          "term": "밋업",
+          "count": 1
+        },
+        {
+          "term": "올릴",
+          "count": 1
+        },
+        {
+          "term": "예정",
+          "count": 1
+        },
+        {
+          "term": "관심",
+          "count": 1
+        },
+        {
+          "term": "있으시면",
+          "count": 1
+        },
+        {
+          "term": "팔로우",
+          "count": 1
+        },
+        {
+          "term": "해주세",
+          "count": 1
+        },
+        {
+          "term": "인스타",
+          "count": 1
+        },
+        {
+          "term": "알림",
+          "count": 1
+        },
+        {
+          "term": "받았습니",
+          "count": 1
+        },
+        {
+          "term": "보내기",
+          "count": 1
+        },
+        {
+          "term": "챗봇",
+          "count": 1
+        },
+        {
+          "term": "보내는건가",
+          "count": 1
+        },
+        {
+          "term": "초보",
+          "count": 1
+        },
+        {
+          "term": "그러",
+          "count": 1
+        },
+        {
+          "term": "예매",
+          "count": 1
+        },
+        {
+          "term": "가이드",
+          "count": 1
+        },
+        {
+          "term": "따라",
+          "count": 1
+        },
+        {
+          "term": "셋팅하려고하",
+          "count": 1
+        },
+        {
+          "term": "codex깔",
+          "count": 1
+        },
+        {
+          "term": "맡기기",
+          "count": 1
+        },
+        {
+          "term": "code넣기",
+          "count": 1
+        },
+        {
+          "term": "맞을까",
+          "count": 1
+        },
+        {
+          "term": "토큰",
+          "count": 1
+        },
+        {
+          "term": "다이어트",
+          "count": 1
+        },
+        {
+          "term": "보셨나",
+          "count": 1
+        },
+        {
+          "term": "context",
+          "count": 1
+        },
+        {
+          "term": "used",
+          "count": 1
+        },
+        {
+          "term": "자주",
+          "count": 1
+        },
+        {
+          "term": "뜨면",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "나한테 맞을지",
+          "count": 4
+        },
+        {
+          "term": "nanoclaw vs",
+          "count": 3
+        },
+        {
+          "term": "vs openclaw",
+          "count": 3
+        },
+        {
+          "term": "openclaw 나에게",
+          "count": 3
+        },
+        {
+          "term": "나에게 맞는",
+          "count": 3
+        },
+        {
+          "term": "9시 오픈클로",
+          "count": 2
+        },
+        {
+          "term": "오픈클로 무료",
+          "count": 2
+        },
+        {
+          "term": "무료 웨비나",
+          "count": 2
+        },
+        {
+          "term": "웨비나 진행합니",
+          "count": 2
+        },
+        {
+          "term": "진행합니 주제",
+          "count": 2
+        },
+        {
+          "term": "주제 nanoclaw",
+          "count": 2
+        },
+        {
+          "term": "맞는 설치형",
+          "count": 2
+        },
+        {
+          "term": "설치형 나한테",
+          "count": 2
+        },
+        {
+          "term": "맞을지 클라우드형",
+          "count": 2
+        },
+        {
+          "term": "클라우드형 나한테",
+          "count": 2
+        },
+        {
+          "term": "맞을지 헷갈렸던",
+          "count": 2
+        },
+        {
+          "term": "헷갈렸던 분들께",
+          "count": 2
+        },
+        {
+          "term": "분들께 도움될",
+          "count": 2
+        },
+        {
+          "term": "도움될 내용이에",
+          "count": 2
+        },
+        {
+          "term": "내용이에 연사",
+          "count": 2
+        },
+        {
+          "term": "연사 박정기",
+          "count": 2
+        },
+        {
+          "term": "박정기 시간",
+          "count": 2
+        },
+        {
+          "term": "시간 9시",
+          "count": 2
+        },
+        {
+          "term": "9시 10시",
+          "count": 2
+        },
+        {
+          "term": "10시 바로",
+          "count": 2
+        },
+        {
+          "term": "바로 신청해보세",
+          "count": 2
+        },
+        {
+          "term": "신청해보세 참여하시",
+          "count": 2
+        },
+        {
+          "term": "참여하시 분들께",
+          "count": 2
+        },
+        {
+          "term": "분들께 특별한",
+          "count": 2
+        },
+        {
+          "term": "특별한 이벤트",
+          "count": 2
+        },
+        {
+          "term": "이벤트 준비되어",
+          "count": 2
+        },
+        {
+          "term": "준비되어 있으",
+          "count": 2
+        },
+        {
+          "term": "있으 기대하세",
+          "count": 2
+        },
+        {
+          "term": "병렬로 시키려면",
+          "count": 2
+        },
+        {
+          "term": "슬랙 안녕",
+          "count": 2
+        },
+        {
+          "term": "15분전 9시",
+          "count": 1
+        },
+        {
+          "term": "15분 nanoclaw",
+          "count": 1
+        },
+        {
+          "term": "뽀피터스팀 sns",
+          "count": 1
+        },
+        {
+          "term": "sns 새로",
+          "count": 1
+        },
+        {
+          "term": "새로 만들었어",
+          "count": 1
+        },
+        {
+          "term": "만들었어 오픈클로",
+          "count": 1
+        },
+        {
+          "term": "오픈클로 소식",
+          "count": 1
+        },
+        {
+          "term": "소식 실험",
+          "count": 1
+        },
+        {
+          "term": "실험 웨비나",
+          "count": 1
+        },
+        {
+          "term": "웨비나 밋업",
+          "count": 1
+        },
+        {
+          "term": "밋업 이야기",
+          "count": 1
+        },
+        {
+          "term": "이야기 올릴",
+          "count": 1
+        },
+        {
+          "term": "올릴 예정",
+          "count": 1
+        },
+        {
+          "term": "예정 관심",
+          "count": 1
+        },
+        {
+          "term": "관심 있으시면",
+          "count": 1
+        }
+      ],
+      "total_messages": 62
+    }
+  }
+}

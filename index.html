@@ -600,7 +600,7 @@ async function loadToday() {
   el.innerHTML = '<div class="loading">로딩 중...</div>';
 
   try {
-    const res = await fetch(`/data/editorial/${date}.json`);
+    const res = await fetch(`data/editorial/${date}.json`);
     if (res.ok) {
       const data = await res.json();
       state.editorialCache[date] = data;
@@ -613,8 +613,8 @@ async function loadToday() {
   // Fallback: QA files
   try {
     const [r1, r2] = await Promise.allSettled([
-      fetch(`/data/qa/${date}-덕후방.json`).then(r => r.ok ? r.json() : null),
-      fetch(`/data/qa/${date}-초보방.json`).then(r => r.ok ? r.json() : null),
+      fetch(`data/qa/${date}-덕후방.json`).then(r => r.ok ? r.json() : null),
+      fetch(`data/qa/${date}-초보방.json`).then(r => r.ok ? r.json() : null),
     ]);
     const qa1 = r1.status === 'fulfilled' ? r1.value : null;
     const qa2 = r2.status === 'fulfilled' ? r2.value : null;
@@ -753,7 +753,7 @@ async function generateDraft(btn) {
       alert('초안 생성은 로컬 서버(python3 server.py)에서만 가능합니다.');
       btn.textContent = '✍️초안 생성';
       return;
-      const res = await fetch('/api/draft', {
+      const res = await fetch('api/draft', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({text, thread_angle: angle, room, date}),
@@ -791,7 +791,7 @@ function bindItemEvents(el, date) {}
 async function loadDates() {
   state.datesLoaded = true;
   try {
-    const res = await fetch('/data/dates.json');
+    const res = await fetch('data/dates.json');
     state.allDates = await res.json();
   } catch(e) { state.allDates = []; }
 }
@@ -830,7 +830,7 @@ async function runSearch() {
     let data = state.editorialCache[date];
     if (!data) {
       try {
-        const res = await fetch(`/data/editorial/${date}.json`);
+        const res = await fetch(`data/editorial/${date}.json`);
         if (res.ok) { data = await res.json(); state.editorialCache[date] = data; }
       } catch(e) { continue; }
     }
@@ -893,7 +893,7 @@ async function loadTrend() {
     let data = state.keywordsCache[date];
     if (!data) {
       try {
-        const res = await fetch(`/data/keywords/${date}.json`);
+        const res = await fetch(`data/keywords/${date}.json`);
         if (res.ok) { data = await res.json(); state.keywordsCache[date] = data; }
       } catch(e) { return; }
     }

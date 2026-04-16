@@ -68,19 +68,32 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 /* Thread drafts */
 .draft-card { background: #fff; border: 1px solid #ebebeb; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
 .draft-header { padding: 18px 20px 14px; border-bottom: 1px solid #f0f0f0; }
-.draft-target { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 700; margin-bottom: 8px; }
+.draft-badges { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+.draft-target { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 700; }
 .draft-target.본방 { background: #FFF0F0; color: #FF5A5F; }
 .draft-target.초보방 { background: #F0F7FF; color: #3B82F6; }
-.draft-gsnb { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 600; background: #f5f5f5; color: #717171; margin-left: 6px; }
-.draft-title { font-size: 1.1em; font-weight: 700; color: #222; margin-top: 6px; }
-.draft-body { padding: 16px 20px; white-space: pre-wrap; font-size: 0.88em; color: #333; line-height: 1.7; max-height: 200px; overflow: hidden; position: relative; transition: max-height 0.3s; }
-.draft-body.expanded { max-height: none; }
-.draft-body:not(.expanded)::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, #fff); }
+.draft-gsnb { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 600; background: #f5f5f5; color: #717171; }
+.draft-pmf { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72em; font-weight: 600; background: #F0FFF4; color: #22c55e; }
+.draft-title { font-size: 1.1em; font-weight: 700; color: #222; }
+.draft-chain { padding: 0; }
+.chain-post { padding: 16px 20px; border-bottom: 1px solid #f5f5f5; }
+.chain-post:last-child { border-bottom: none; }
+.chain-post.hook { background: #FFFBF5; border-left: 3px solid #FF5A5F; }
+.chain-post.body { background: #fff; border-left: 3px solid #ebebeb; }
+.chain-post.cta { background: #F8F8FF; border-left: 3px solid #3B82F6; }
+.chain-label { font-size: 0.68em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.chain-post.hook .chain-label { color: #FF5A5F; }
+.chain-post.body .chain-label { color: #999; }
+.chain-post.cta .chain-label { color: #3B82F6; }
+.chain-text { white-space: pre-wrap; font-size: 0.88em; color: #333; line-height: 1.7; }
+.chain-copy { display: inline-block; margin-top: 8px; padding: 4px 12px; background: #FF5A5F; color: #fff; border: none; border-radius: 6px; font-size: 0.75em; font-weight: 600; cursor: pointer; }
+.chain-copy:hover { background: #e04e52; }
+.chain-copy.copied { background: #22c55e; }
+.draft-collapse { max-height: 280px; overflow: hidden; position: relative; }
+.draft-collapse:not(.expanded)::after { content:''; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(transparent,#fff); pointer-events:none; }
+.draft-collapse.expanded { max-height: none; }
 .draft-toggle { display: block; width: 100%; padding: 12px; background: none; border: none; border-top: 1px solid #f0f0f0; color: #FF5A5F; font-weight: 600; font-size: 0.85em; cursor: pointer; }
 .draft-toggle:hover { background: #fafafa; }
-.draft-copy { display: inline-block; margin-left: 12px; padding: 4px 12px; background: #FF5A5F; color: #fff; border: none; border-radius: 6px; font-size: 0.78em; font-weight: 600; cursor: pointer; }
-.draft-copy:hover { background: #e04e52; }
-.draft-copy.copied { background: #22c55e; }
 
 /* Empty / Loading */
 .empty { text-align: center; padding: 60px 20px; color: #999; }
@@ -293,21 +306,46 @@ function onCheck(el, date, id) {
 }
 
 function renderDraft(dr) {
+  const chain = dr.chain || [];
+  const labels = {hook:'Hook — 첫 글', body:'본문', cta:'CTA — 마무리'};
+  let chainHtml = chain.map((p,i) => {
+    const lbl = p.label || labels[p.type] || p.type;
+    return '<div class="chain-post ' + p.type + '">' +
+      '<div class="chain-label">' + esc(lbl) + '</div>' +
+      '<div class="chain-text">' + esc(p.text) + '</div>' +
+      '<button class="chain-copy" onclick="copyChain(this,\'' + dr.id + '-' + i + '\')">복사</button>' +
+    '</div>';
+  }).join('');
+
   return '<div class="draft-card">' +
     '<div class="draft-header">' +
-      '<span class="draft-target ' + esc(dr.target) + '">' + esc(dr.target) + '</span>' +
-      '<span class="draft-gsnb">' + esc(dr.gsnb) + '</span>' +
+      '<div class="draft-badges">' +
+        '<span class="draft-target ' + esc(dr.target) + '">' + esc(dr.target) + '</span>' +
+        '<span class="draft-gsnb">' + esc(dr.gsnb) + '</span>' +
+        (dr.pmf ? '<span class="draft-pmf">PMF ' + esc(dr.pmf.split(' ')[0]) + '</span>' : '') +
+      '</div>' +
       '<div class="draft-title">' + esc(dr.title) + '</div>' +
     '</div>' +
-    '<div class="draft-body" id="draft-body-' + dr.id + '">' + esc(dr.body) + '</div>' +
+    '<div class="draft-collapse" id="draft-chain-' + dr.id + '">' +
+      '<div class="draft-chain">' + chainHtml + '</div>' +
+    '</div>' +
     '<button class="draft-toggle" onclick="toggleDraft(\'' + dr.id + '\', this)">전체 보기</button>' +
   '</div>';
 }
 
 function toggleDraft(id, btn) {
-  const body = document.getElementById('draft-body-' + id);
-  body.classList.toggle('expanded');
-  btn.textContent = body.classList.contains('expanded') ? '접기' : '전체 보기';
+  const el = document.getElementById('draft-chain-' + id);
+  el.classList.toggle('expanded');
+  btn.textContent = el.classList.contains('expanded') ? '접기' : '전체 보기';
+}
+
+function copyChain(btn, id) {
+  const text = btn.previousElementSibling.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.classList.add('copied');
+    btn.textContent = '복사됨!';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '복사'; }, 1500);
+  });
 }
 
 function toggleSection(header) {

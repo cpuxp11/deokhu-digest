@@ -95,6 +95,38 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 .draft-toggle { display: block; width: 100%; padding: 12px; background: none; border: none; border-top: 1px solid #f0f0f0; color: #FF5A5F; font-weight: 600; font-size: 0.85em; cursor: pointer; }
 .draft-toggle:hover { background: #fafafa; }
 
+/* Threads Preview Modal */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:100; justify-content:center; align-items:center; padding:20px; }
+.modal-overlay.open { display:flex; }
+.modal { background:#fff; border-radius:16px; max-width:520px; width:100%; max-height:90vh; overflow-y:auto; }
+.modal-header { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid #f0f0f0; }
+.modal-header h3 { font-size:1em; font-weight:700; }
+.modal-close { background:none; border:none; font-size:1.4em; cursor:pointer; color:#999; padding:4px 8px; }
+.modal-close:hover { color:#222; }
+.modal-actions { display:flex; gap:8px; padding:12px 20px; border-bottom:1px solid #f0f0f0; }
+.modal-btn { padding:8px 16px; border-radius:8px; font-size:0.82em; font-weight:600; cursor:pointer; border:1px solid #ddd; background:#fff; color:#222; }
+.modal-btn:hover { background:#f7f7f7; }
+.modal-btn.primary { background:#000; color:#fff; border-color:#000; }
+.modal-btn.primary:hover { background:#333; }
+
+/* Thread mockup */
+.thread-mock { padding:16px 20px; }
+.thread-post { display:flex; gap:12px; padding:14px 0; }
+.thread-post:not(:last-child) { border-bottom:1px solid #f5f5f5; }
+.thread-avatar-col { display:flex; flex-direction:column; align-items:center; gap:0; }
+.thread-avatar { width:36px; height:36px; border-radius:50%; background:#000; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7em; font-weight:800; flex-shrink:0; }
+.thread-line { width:2px; flex:1; background:#e0e0e0; margin:4px 0; min-height:16px; }
+.thread-content { flex:1; min-width:0; }
+.thread-username { font-size:0.85em; font-weight:700; color:#000; }
+.thread-time { font-size:0.75em; color:#999; margin-left:6px; }
+.thread-text { font-size:0.9em; color:#222; line-height:1.6; margin-top:4px; white-space:pre-wrap; word-break:break-word; }
+.thread-chars { font-size:0.7em; color:#999; margin-top:6px; }
+.thread-chars.warn { color:#FF5A5F; font-weight:600; }
+.thread-type-badge { display:inline-block; padding:1px 6px; border-radius:4px; font-size:0.65em; font-weight:600; margin-left:6px; }
+.thread-type-badge.hook { background:#FFF0F0; color:#FF5A5F; }
+.thread-type-badge.body { background:#f5f5f5; color:#999; }
+.thread-type-badge.cta { background:#F0F0FF; color:#3B82F6; }
+
 /* Empty / Loading */
 .empty { text-align: center; padding: 60px 20px; color: #999; }
 .loading { text-align: center; padding: 80px 20px; }
@@ -137,6 +169,20 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     <p>해당 날짜의 다이제스트가 아직 없어요.</p>
   </div>
 
+</div>
+
+<div class="modal-overlay" id="thread-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Threads 미리보기 — @bbojjaki_ai</h3>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn primary" onclick="copyAllThread()">전체 복사</button>
+      <button class="modal-btn" onclick="closeModal()">닫기</button>
+    </div>
+    <div class="thread-mock" id="thread-mock-body"></div>
+  </div>
 </div>
 
 <script>
@@ -191,6 +237,7 @@ function showError() {
 function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
 function render(d) {
+  window._lastData = d;
   // Subtitle
   document.getElementById('subtitle').textContent = d.subtitle || d.title || '';
 
@@ -329,7 +376,10 @@ function renderDraft(dr) {
     '<div class="draft-collapse" id="draft-chain-' + dr.id + '">' +
       '<div class="draft-chain">' + chainHtml + '</div>' +
     '</div>' +
-    '<button class="draft-toggle" onclick="toggleDraft(\'' + dr.id + '\', this)">전체 보기</button>' +
+    '<div style="display:flex;gap:0;border-top:1px solid #f0f0f0;">' +
+      '<button class="draft-toggle" style="flex:1;border-top:none;" onclick="toggleDraft(\'' + dr.id + '\', this)">전체 보기</button>' +
+      '<button class="draft-toggle" style="flex:1;border-top:none;border-left:1px solid #f0f0f0;color:#000;font-weight:700;" onclick="openThreadPreview(\'' + dr.id + '\')">📱 Threads 미리보기</button>' +
+    '</div>' +
   '</div>';
 }
 
@@ -356,6 +406,57 @@ function toggleThread(btn) {
   const thread = btn.nextElementSibling;
   thread.classList.toggle('open');
   btn.textContent = thread.classList.contains('open') ? '스레드 앵글 닫기' : '스레드 앵글 보기';
+}
+
+// Thread preview modal
+let currentDrafts = [];
+function openThreadPreview(draftId) {
+  const dataStr = document.querySelector('[data-drafts]');
+  // find draft from last loaded data
+  if (!window._lastData || !window._lastData.thread_drafts) return;
+  const dr = window._lastData.thread_drafts.find(d => d.id === draftId);
+  if (!dr) return;
+  const chain = dr.chain || [];
+  const labels = {hook:'첫 글', body:'답글', cta:'마무리'};
+  const typeLabels = {hook:'HOOK', body:'BODY', cta:'CTA'};
+  let html = '';
+  chain.forEach((p, i) => {
+    const chars = p.text.length;
+    const isLast = i === chain.length - 1;
+    html += '<div class="thread-post">' +
+      '<div class="thread-avatar-col">' +
+        '<div class="thread-avatar">B</div>' +
+        (!isLast ? '<div class="thread-line"></div>' : '') +
+      '</div>' +
+      '<div class="thread-content">' +
+        '<span class="thread-username">bbojjaki_ai</span>' +
+        '<span class="thread-time">' + (labels[p.type] || '') + '</span>' +
+        '<span class="thread-type-badge ' + p.type + '">' + (typeLabels[p.type] || '') + '</span>' +
+        '<div class="thread-text">' + esc(p.text) + '</div>' +
+        '<div class="thread-chars' + (chars > 500 ? ' warn' : '') + '">' + chars + '자' + (chars > 500 ? ' ⚠️ 500자 초과!' : '') + '</div>' +
+      '</div>' +
+    '</div>';
+  });
+  document.getElementById('thread-mock-body').innerHTML = html;
+  document.getElementById('thread-modal').classList.add('open');
+  window._currentChain = chain;
+}
+
+function closeModal() {
+  document.getElementById('thread-modal').classList.remove('open');
+}
+
+function copyAllThread() {
+  if (!window._currentChain) return;
+  const text = window._currentChain.map((p,i) => {
+    const label = i === 0 ? '[첫 글]' : '[답글 ' + i + ']';
+    return label + '\n' + p.text;
+  }).join('\n\n---\n\n');
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.modal-btn.primary');
+    btn.textContent = '복사 완료!';
+    setTimeout(() => { btn.textContent = '전체 복사'; }, 1500);
+  });
 }
 
 // Date navigation

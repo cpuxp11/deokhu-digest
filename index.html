@@ -6,90 +6,79 @@
 <title>덕후방 다이제스트</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f7f7f7; color: #222; line-height: 1.65; }
 
-.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.container { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
 
 /* Header */
-.header { padding: 40px 0 20px; border-bottom: 1px solid #222; margin-bottom: 24px; }
-.header h1 { font-size: 1.8em; font-weight: 800; color: #fff; letter-spacing: -1px; }
-.header h1 span { color: #4ecdc4; }
-.header-meta { display: flex; align-items: center; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
-.date-nav { display: flex; align-items: center; gap: 8px; }
-.date-nav button { background: #1a1a1a; border: 1px solid #333; color: #ccc; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.9em; }
-.date-nav button:hover { background: #222; border-color: #4ecdc4; }
-.date-nav input[type="date"] { background: #111; border: 1px solid #333; color: #e0e0e0; padding: 6px 12px; border-radius: 6px; font-size: 0.9em; }
+.header { padding: 32px 0 20px; margin-bottom: 8px; }
+.header h1 { font-size: 1.6em; font-weight: 800; color: #222; letter-spacing: -0.5px; }
+.header h1 span { color: #FF5A5F; }
+.subtitle { font-size: 0.95em; color: #717171; margin-top: 4px; }
+.date-nav { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+.date-nav button { background: #fff; border: 1px solid #ddd; color: #222; padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 0.9em; font-weight: 500; transition: all 0.15s; }
+.date-nav button:hover { border-color: #222; }
+.date-nav input[type="date"] { background: #fff; border: 1px solid #ddd; color: #222; padding: 7px 14px; border-radius: 8px; font-size: 0.9em; }
 
-/* Stats bar */
-.stats-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
-.stat-chip { background: #111; border: 1px solid #222; border-radius: 8px; padding: 12px 16px; flex: 1; min-width: 120px; }
-.stat-chip .label { font-size: 0.75em; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
-.stat-chip .value { font-size: 1.6em; font-weight: 800; color: #4ecdc4; margin-top: 2px; }
-.stat-chip .sub { font-size: 0.8em; color: #888; }
+/* Stats */
+.stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.stat-chip { background: #fff; border: 1px solid #ebebeb; border-radius: 12px; padding: 14px 18px; flex: 1; min-width: 100px; }
+.stat-chip .label { font-size: 0.7em; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.stat-chip .value { font-size: 1.5em; font-weight: 800; color: #FF5A5F; margin-top: 2px; }
+.stat-chip .sub { font-size: 0.78em; color: #999; margin-top: 2px; }
 
-/* Tabs */
-.tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 0; }
-.tab { background: none; border: none; color: #666; padding: 10px 20px; cursor: pointer; font-size: 0.95em; font-weight: 600; border-bottom: 2px solid transparent; transition: all 0.2s; }
-.tab:hover { color: #ccc; }
-.tab.active { color: #4ecdc4; border-bottom-color: #4ecdc4; }
-.tab .badge { background: #1a2a2a; color: #4ecdc4; padding: 1px 8px; border-radius: 10px; font-size: 0.8em; margin-left: 6px; }
+/* Keywords */
+.keywords-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.kw { background: #fff; border: 1px solid #ebebeb; padding: 5px 14px; border-radius: 20px; font-size: 0.82em; color: #484848; font-weight: 500; }
 
-/* Section */
-.section { display: none; }
-.section.active { display: block; }
+/* Section group */
+.section-group { background: #fff; border: 1px solid #ebebeb; border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
+.section-header { display: flex; align-items: center; gap: 10px; padding: 18px 20px 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; user-select: none; }
+.section-header:hover { background: #fafafa; }
+.section-icon { font-size: 1.1em; }
+.section-title { font-size: 1.05em; font-weight: 700; color: #222; }
+.section-count { background: #f0f0f0; color: #717171; padding: 2px 10px; border-radius: 10px; font-size: 0.78em; font-weight: 600; }
+.section-progress { margin-left: auto; font-size: 0.78em; color: #999; }
+.section-chevron { color: #ccc; font-size: 0.9em; transition: transform 0.2s; }
+.section-group.collapsed .section-chevron { transform: rotate(-90deg); }
+.section-group.collapsed .section-items { display: none; }
 
-/* Cards */
-.card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px; margin-bottom: 12px; cursor: pointer; transition: border-color 0.2s; }
-.card:hover { border-color: #333; }
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-.card-rank { font-size: 1.4em; font-weight: 900; color: #4ecdc4; min-width: 32px; }
-.card-body { flex: 1; }
-.card-title { font-size: 1em; font-weight: 600; color: #ddd; line-height: 1.5; }
-.card-meta { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
-.card-meta span { font-size: 0.8em; color: #888; }
-.card-meta .room { color: #4ecdc4; font-weight: 600; }
-.card-meta .hot { color: #ff6b6b; }
+/* Items */
+.item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; }
+.item:last-child { border-bottom: none; }
+.item:hover { background: #fafafa; }
+.item.checked { opacity: 0.5; }
+.item.checked .item-text { text-decoration: line-through; }
 
-/* Tags */
-.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-.tag { display: inline-block; background: #1a2a2a; color: #4ecdc4; padding: 2px 10px; border-radius: 12px; font-size: 0.78em; }
-.tag-qa { background: #1a2a1a; color: #6bcb77; }
-.tag-q { background: #2a2a1a; color: #ffd93d; }
-.tag-none { background: #1a1a1a; color: #666; }
+.item-check { flex-shrink: 0; margin-top: 2px; }
+.item-check input { width: 18px; height: 18px; accent-color: #FF5A5F; cursor: pointer; }
 
-/* Rating stars */
-.rating { color: #ffd93d; font-size: 0.85em; letter-spacing: 2px; }
+.item-content { flex: 1; min-width: 0; }
+.item-text { font-size: 0.92em; color: #222; line-height: 1.55; font-weight: 500; }
+.item-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
+.item-tag { background: #f7f7f7; color: #717171; padding: 2px 8px; border-radius: 6px; font-size: 0.72em; font-weight: 500; }
 
-/* Expand detail */
-.card-detail { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid #222; }
-.card-detail.open { display: block; }
-.card-detail p { font-size: 0.9em; color: #999; line-height: 1.6; }
+/* Thread angle */
+.item-thread { margin-top: 10px; padding: 10px 14px; background: #FFF8F0; border-left: 3px solid #FF5A5F; border-radius: 0 8px 8px 0; font-size: 0.82em; color: #484848; line-height: 1.5; display: none; }
+.item-thread.open { display: block; }
+.item-thread-label { font-size: 0.7em; font-weight: 700; color: #FF5A5F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.item-expand { background: none; border: none; color: #FF5A5F; font-size: 0.8em; font-weight: 600; cursor: pointer; margin-top: 6px; padding: 0; }
+.item-expand:hover { text-decoration: underline; }
 
-/* Unanswered */
-.unanswered-card { border-left: 3px solid #ff6b6b; }
-.unanswered-card .card-rank { color: #ff6b6b; }
-
-/* Keywords cloud */
-.keywords-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-.kw { background: #111; border: 1px solid #222; padding: 4px 14px; border-radius: 20px; font-size: 0.85em; color: #ccc; }
-
-/* Empty */
-.empty { text-align: center; padding: 60px 20px; color: #555; }
-.empty h3 { color: #666; margin-bottom: 8px; }
-
-/* Loading */
+/* Empty / Loading */
+.empty { text-align: center; padding: 60px 20px; color: #999; }
 .loading { text-align: center; padding: 80px 20px; }
-.loading .spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid #222; border-top-color: #4ecdc4; border-radius: 50%; animation: spin 0.8s linear infinite; }
+.loading .spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid #ebebeb; border-top-color: #FF5A5F; border-radius: 50%; animation: spin 0.8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-@media (max-width: 768px) {
-  .container { padding: 12px; }
-  .header h1 { font-size: 1.4em; }
-  .stats-bar { gap: 8px; }
+@media (max-width: 640px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3em; }
+  .stats-bar { gap: 6px; }
   .stat-chip { min-width: 80px; padding: 10px 12px; }
   .stat-chip .value { font-size: 1.2em; }
-  .tab { padding: 8px 12px; font-size: 0.85em; }
-  .card { padding: 16px; }
+  .item { padding: 12px 14px; gap: 10px; }
+  .section-header { padding: 14px 14px 12px; }
 }
 </style>
 </head>
@@ -98,38 +87,24 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
 
   <div class="header">
     <h1><span>덕후방</span> 다이제스트</h1>
-    <div class="header-meta">
-      <div class="date-nav">
-        <button id="prev-day">&larr;</button>
-        <input type="date" id="date-picker">
-        <button id="next-day">&rarr;</button>
-      </div>
+    <div id="subtitle" class="subtitle"></div>
+    <div class="date-nav">
+      <button id="prev-day">&larr;</button>
+      <input type="date" id="date-picker">
+      <button id="next-day">&rarr;</button>
     </div>
   </div>
 
   <div id="loading" class="loading"><div class="spinner"></div></div>
 
   <div id="content" style="display:none;">
-
     <div class="stats-bar" id="stats-bar"></div>
-
     <div class="keywords-bar" id="keywords-bar"></div>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="hot">핫토픽 <span class="badge" id="hot-count">0</span></button>
-      <button class="tab" data-tab="unanswered">무응답 질문 <span class="badge" id="unanswered-count">0</span></button>
-      <button class="tab" data-tab="candidates">카드 후보 <span class="badge" id="candidates-count">0</span></button>
-    </div>
-
-    <div class="section active" id="sec-hot"></div>
-    <div class="section" id="sec-unanswered"></div>
-    <div class="section" id="sec-candidates"></div>
-
+    <div id="sections"></div>
   </div>
 
   <div id="error" class="empty" style="display:none;">
-    <h3>데이터 없음</h3>
-    <p>해당 날짜의 다이제스트가 아직 생성되지 않았어요.</p>
+    <p>해당 날짜의 다이제스트가 아직 없어요.</p>
   </div>
 
 </div>
@@ -138,8 +113,17 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
 const BASE = 'data';
 let dates = [];
 let currentDate = '';
+let checkState = {};
+
+function loadChecks() {
+  try { checkState = JSON.parse(localStorage.getItem('deokhu-checks') || '{}'); } catch(e) { checkState = {}; }
+}
+function saveChecks() {
+  localStorage.setItem('deokhu-checks', JSON.stringify(checkState));
+}
 
 async function init() {
+  loadChecks();
   try {
     const res = await fetch(BASE + '/index.json');
     dates = await res.json();
@@ -148,12 +132,8 @@ async function init() {
       currentDate = dates[0];
       document.getElementById('date-picker').value = currentDate;
       await loadDate(currentDate);
-    } else {
-      showError();
-    }
-  } catch(e) {
-    showError();
-  }
+    } else { showError(); }
+  } catch(e) { showError(); }
 }
 
 async function loadDate(date) {
@@ -178,94 +158,130 @@ function showError() {
   document.getElementById('content').style.display = 'none';
 }
 
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
 function render(d) {
+  // Subtitle
+  document.getElementById('subtitle').textContent = d.subtitle || d.title || '';
+
   // Stats
   const rooms = d.rooms || {};
   const totalMsgs = Object.values(rooms).reduce((s,r) => s + r.total_msgs, 0);
   const totalUsers = Object.values(rooms).reduce((s,r) => s + r.active_users, 0);
-  const roomDetails = Object.entries(rooms).map(([n,r]) => n + ' ' + r.total_msgs + '건').join(' / ');
   document.getElementById('stats-bar').innerHTML =
-    statChip('총 메시지', totalMsgs, roomDetails) +
-    statChip('발화자', totalUsers + '명', Object.entries(rooms).map(([n,r]) => n + ' ' + r.active_users + '명').join(' / ')) +
-    statChip('미디어', Object.values(rooms).reduce((s,r) => s + r.media, 0), '이미지/링크/파일');
+    statChip('Messages', totalMsgs, Object.entries(rooms).map(([n,r]) => n+' '+r.total_msgs).join(' / ')) +
+    statChip('Speakers', totalUsers, Object.entries(rooms).map(([n,r]) => n+' '+r.active_users).join(' / ')) +
+    statChip('Media', Object.values(rooms).reduce((s,r) => s+r.media, 0), '');
 
   // Keywords
-  document.getElementById('keywords-bar').innerHTML = (d.top_keywords || []).map(k => '<span class="kw">' + esc(k) + '</span>').join('');
+  document.getElementById('keywords-bar').innerHTML = (d.top_keywords||[]).map(k => '<span class="kw">'+esc(k)+'</span>').join('');
 
-  // Tabs count
-  document.getElementById('hot-count').textContent = (d.hot_topics || []).length;
-  document.getElementById('unanswered-count').textContent = (d.unanswered || []).length;
-  document.getElementById('candidates-count').textContent = (d.card_candidates || []).length;
-
-  // Hot topics
-  document.getElementById('sec-hot').innerHTML = (d.hot_topics || []).length === 0
-    ? '<div class="empty"><p>핫토픽 없음</p></div>'
-    : (d.hot_topics || []).map(t => hotCard(t)).join('');
-
-  // Unanswered
-  document.getElementById('sec-unanswered').innerHTML = (d.unanswered || []).length === 0
-    ? '<div class="empty"><p>모든 질문에 답변이 달렸어요</p></div>'
-    : (d.unanswered || []).map((u,i) => unansweredCard(u, i+1)).join('');
-
-  // Candidates
-  document.getElementById('sec-candidates').innerHTML = (d.card_candidates || []).length === 0
-    ? '<div class="empty"><p>카드 후보 없음</p></div>'
-    : (d.card_candidates || []).map(c => candidateCard(c)).join('');
+  // Sections (new editorial format)
+  const sectionsEl = document.getElementById('sections');
+  if (d.sections) {
+    sectionsEl.innerHTML = d.sections.map(sec => renderSection(sec, d.date)).join('');
+  } else {
+    // Fallback: old format (hot_topics / unanswered / card_candidates)
+    sectionsEl.innerHTML = renderLegacy(d);
+  }
 }
 
 function statChip(label, value, sub) {
-  return '<div class="stat-chip"><div class="label">' + label + '</div><div class="value">' + value + '</div><div class="sub">' + esc(sub) + '</div></div>';
+  return '<div class="stat-chip"><div class="label">'+label+'</div><div class="value">'+value+'</div>'+(sub?'<div class="sub">'+esc(sub)+'</div>':'')+'</div>';
 }
 
-function hotCard(t) {
-  return '<div class="card" onclick="toggleDetail(this)"><div class="card-header"><div class="card-rank">#' + t.rank + '</div><div class="card-body"><div class="card-title">' + esc(t.summary) + '</div><div class="card-meta"><span class="room">' + esc(t.room) + '</span><span>' + t.time + '</span><span class="hot">' + t.msg_count + '건 / ' + t.user_count + '명</span><span class="tag-' + (t.qa_flag === 'QA' ? 'qa' : t.qa_flag === 'Q_' ? 'q' : 'none') + '">' + t.qa_flag + '</span></div><div class="tags">' + (t.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+function renderSection(sec, date) {
+  const items = sec.items || [];
+  const checkedCount = items.filter(it => isChecked(date, it.id)).length;
+  const progress = items.length > 0 ? checkedCount + '/' + items.length : '';
+  return '<div class="section-group">' +
+    '<div class="section-header" onclick="toggleSection(this)">' +
+      '<span class="section-icon">' + (sec.icon||'') + '</span>' +
+      '<span class="section-title">' + esc(sec.title) + '</span>' +
+      '<span class="section-count">' + items.length + '</span>' +
+      '<span class="section-progress">' + progress + '</span>' +
+      '<span class="section-chevron">&#9662;</span>' +
+    '</div>' +
+    '<div class="section-items">' +
+      items.map(it => renderItem(it, date)).join('') +
+    '</div>' +
+  '</div>';
 }
 
-function unansweredCard(u, i) {
-  return '<div class="card unanswered-card"><div class="card-header"><div class="card-rank">' + i + '</div><div class="card-body"><div class="card-title">' + esc(u.question_summary) + '</div><div class="card-meta"><span class="room">' + esc(u.room) + '</span><span>' + u.time + '</span></div><div class="tags">' + (u.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+function renderItem(it, date) {
+  const checked = isChecked(date, it.id);
+  const hasThread = it.thread_angle && it.thread_angle.trim();
+  return '<div class="item' + (checked?' checked':'') + '">' +
+    '<div class="item-check"><input type="checkbox"' + (checked?' checked':'') + ' onchange="onCheck(this,\'' + date + '\',\'' + it.id + '\')" /></div>' +
+    '<div class="item-content">' +
+      '<div class="item-text">' + esc(it.text) + '</div>' +
+      '<div class="item-tags">' + (it.keywords||[]).map(k => '<span class="item-tag">'+esc(k)+'</span>').join('') + '</div>' +
+      (hasThread ? '<button class="item-expand" onclick="toggleThread(this)">스레드 앵글 보기</button>' +
+        '<div class="item-thread"><div class="item-thread-label">Thread Draft</div>' + esc(it.thread_angle) + '</div>' : '') +
+    '</div>' +
+  '</div>';
 }
 
-function candidateCard(c) {
-  const stars = '★'.repeat(c.rating) + '☆'.repeat(3 - c.rating);
-  const flagClass = c.qa_flag === 'QA' ? 'tag-qa' : c.qa_flag === 'Q_' ? 'tag-q' : 'tag-none';
-  return '<div class="card" onclick="toggleDetail(this)"><div class="card-header"><div class="card-rank">' + c.id + '</div><div class="card-body"><div class="card-title">' + esc(c.summary) + '</div><div class="card-meta"><span class="room">' + esc(c.room) + '</span><span>' + c.time + '</span><span>' + c.msg_count + '건/' + c.user_count + '명</span><span class="' + flagClass + '">' + c.qa_flag + '</span><span class="rating">' + stars + '</span></div><div class="tags">' + (c.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+function renderLegacy(d) {
+  // Wrap old format into section-like structure
+  let html = '';
+  if (d.hot_topics && d.hot_topics.length) {
+    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🔥</span><span class="section-title">핫토픽 TOP 5</span><span class="section-count">'+d.hot_topics.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
+    d.hot_topics.forEach(t => {
+      html += '<div class="item"><div class="item-content"><div class="item-text">#'+t.rank+' '+esc(t.summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(t.room)+'</span><span class="item-tag">'+t.time+'</span><span class="item-tag">'+t.msg_count+'건/'+t.user_count+'명</span>'+(t.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
+    });
+    html += '</div></div>';
+  }
+  if (d.unanswered && d.unanswered.length) {
+    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🔴</span><span class="section-title">무응답 질문</span><span class="section-count">'+d.unanswered.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
+    d.unanswered.forEach(u => {
+      html += '<div class="item"><div class="item-content"><div class="item-text">'+esc(u.question_summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(u.room)+'</span>'+(u.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
+    });
+    html += '</div></div>';
+  }
+  if (d.card_candidates && d.card_candidates.length) {
+    html += '<div class="section-group"><div class="section-header" onclick="toggleSection(this)"><span class="section-icon">🃏</span><span class="section-title">카드 후보</span><span class="section-count">'+d.card_candidates.length+'</span><span class="section-chevron">&#9662;</span></div><div class="section-items">';
+    d.card_candidates.forEach(c => {
+      html += '<div class="item"><div class="item-content"><div class="item-text">#'+c.id+' '+esc(c.summary)+'</div><div class="item-tags"><span class="item-tag">'+esc(c.room)+'</span><span class="item-tag">'+c.time+'</span><span class="item-tag">'+c.msg_count+'건</span>'+(c.keywords||[]).map(k=>'<span class="item-tag">'+esc(k)+'</span>').join('')+'</div></div></div>';
+    });
+    html += '</div></div>';
+  }
+  return html || '<div class="empty"><p>데이터 없음</p></div>';
 }
 
-function toggleDetail(el) {
-  const detail = el.querySelector('.card-detail');
-  if (detail) detail.classList.toggle('open');
+function isChecked(date, id) { return !!(checkState[date] && checkState[date][id]); }
+
+function onCheck(el, date, id) {
+  if (!checkState[date]) checkState[date] = {};
+  checkState[date][id] = el.checked;
+  saveChecks();
+  const item = el.closest('.item');
+  if (el.checked) item.classList.add('checked'); else item.classList.remove('checked');
+  // Update progress
+  loadDate(currentDate);
 }
 
-function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+function toggleSection(header) {
+  header.parentElement.classList.toggle('collapsed');
+}
 
-// Tab switching
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('sec-' + tab.dataset.tab).classList.add('active');
-  });
-});
+function toggleThread(btn) {
+  const thread = btn.nextElementSibling;
+  thread.classList.toggle('open');
+  btn.textContent = thread.classList.contains('open') ? '스레드 앵글 닫기' : '스레드 앵글 보기';
+}
 
 // Date navigation
-document.getElementById('date-picker').addEventListener('change', e => {
-  currentDate = e.target.value;
-  loadDate(currentDate);
-});
+document.getElementById('date-picker').addEventListener('change', e => { currentDate = e.target.value; loadDate(currentDate); });
 document.getElementById('prev-day').addEventListener('click', () => {
-  const d = new Date(currentDate);
-  d.setDate(d.getDate() - 1);
-  currentDate = d.toISOString().slice(0, 10);
-  document.getElementById('date-picker').value = currentDate;
-  loadDate(currentDate);
+  const d = new Date(currentDate); d.setDate(d.getDate()-1);
+  currentDate = d.toISOString().slice(0,10);
+  document.getElementById('date-picker').value = currentDate; loadDate(currentDate);
 });
 document.getElementById('next-day').addEventListener('click', () => {
-  const d = new Date(currentDate);
-  d.setDate(d.getDate() + 1);
-  currentDate = d.toISOString().slice(0, 10);
-  document.getElementById('date-picker').value = currentDate;
-  loadDate(currentDate);
+  const d = new Date(currentDate); d.setDate(d.getDate()+1);
+  currentDate = d.toISOString().slice(0,10);
+  document.getElementById('date-picker').value = currentDate; loadDate(currentDate);
 });
 
 init();

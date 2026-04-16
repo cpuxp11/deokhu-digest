@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>덕후방 다이제스트</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+/* Header */
+.header { padding: 40px 0 20px; border-bottom: 1px solid #222; margin-bottom: 24px; }
+.header h1 { font-size: 1.8em; font-weight: 800; color: #fff; letter-spacing: -1px; }
+.header h1 span { color: #4ecdc4; }
+.header-meta { display: flex; align-items: center; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+.date-nav { display: flex; align-items: center; gap: 8px; }
+.date-nav button { background: #1a1a1a; border: 1px solid #333; color: #ccc; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.9em; }
+.date-nav button:hover { background: #222; border-color: #4ecdc4; }
+.date-nav input[type="date"] { background: #111; border: 1px solid #333; color: #e0e0e0; padding: 6px 12px; border-radius: 6px; font-size: 0.9em; }
+
+/* Stats bar */
+.stats-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.stat-chip { background: #111; border: 1px solid #222; border-radius: 8px; padding: 12px 16px; flex: 1; min-width: 120px; }
+.stat-chip .label { font-size: 0.75em; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-chip .value { font-size: 1.6em; font-weight: 800; color: #4ecdc4; margin-top: 2px; }
+.stat-chip .sub { font-size: 0.8em; color: #888; }
+
+/* Tabs */
+.tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 0; }
+.tab { background: none; border: none; color: #666; padding: 10px 20px; cursor: pointer; font-size: 0.95em; font-weight: 600; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.tab:hover { color: #ccc; }
+.tab.active { color: #4ecdc4; border-bottom-color: #4ecdc4; }
+.tab .badge { background: #1a2a2a; color: #4ecdc4; padding: 1px 8px; border-radius: 10px; font-size: 0.8em; margin-left: 6px; }
+
+/* Section */
+.section { display: none; }
+.section.active { display: block; }
+
+/* Cards */
+.card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px; margin-bottom: 12px; cursor: pointer; transition: border-color 0.2s; }
+.card:hover { border-color: #333; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.card-rank { font-size: 1.4em; font-weight: 900; color: #4ecdc4; min-width: 32px; }
+.card-body { flex: 1; }
+.card-title { font-size: 1em; font-weight: 600; color: #ddd; line-height: 1.5; }
+.card-meta { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.card-meta span { font-size: 0.8em; color: #888; }
+.card-meta .room { color: #4ecdc4; font-weight: 600; }
+.card-meta .hot { color: #ff6b6b; }
+
+/* Tags */
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.tag { display: inline-block; background: #1a2a2a; color: #4ecdc4; padding: 2px 10px; border-radius: 12px; font-size: 0.78em; }
+.tag-qa { background: #1a2a1a; color: #6bcb77; }
+.tag-q { background: #2a2a1a; color: #ffd93d; }
+.tag-none { background: #1a1a1a; color: #666; }
+
+/* Rating stars */
+.rating { color: #ffd93d; font-size: 0.85em; letter-spacing: 2px; }
+
+/* Expand detail */
+.card-detail { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid #222; }
+.card-detail.open { display: block; }
+.card-detail p { font-size: 0.9em; color: #999; line-height: 1.6; }
+
+/* Unanswered */
+.unanswered-card { border-left: 3px solid #ff6b6b; }
+.unanswered-card .card-rank { color: #ff6b6b; }
+
+/* Keywords cloud */
+.keywords-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.kw { background: #111; border: 1px solid #222; padding: 4px 14px; border-radius: 20px; font-size: 0.85em; color: #ccc; }
+
+/* Empty */
+.empty { text-align: center; padding: 60px 20px; color: #555; }
+.empty h3 { color: #666; margin-bottom: 8px; }
+
+/* Loading */
+.loading { text-align: center; padding: 80px 20px; }
+.loading .spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid #222; border-top-color: #4ecdc4; border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .container { padding: 12px; }
+  .header h1 { font-size: 1.4em; }
+  .stats-bar { gap: 8px; }
+  .stat-chip { min-width: 80px; padding: 10px 12px; }
+  .stat-chip .value { font-size: 1.2em; }
+  .tab { padding: 8px 12px; font-size: 0.85em; }
+  .card { padding: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1><span>덕후방</span> 다이제스트</h1>
+    <div class="header-meta">
+      <div class="date-nav">
+        <button id="prev-day">&larr;</button>
+        <input type="date" id="date-picker">
+        <button id="next-day">&rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading" class="loading"><div class="spinner"></div></div>
+
+  <div id="content" style="display:none;">
+
+    <div class="stats-bar" id="stats-bar"></div>
+
+    <div class="keywords-bar" id="keywords-bar"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="hot">핫토픽 <span class="badge" id="hot-count">0</span></button>
+      <button class="tab" data-tab="unanswered">무응답 질문 <span class="badge" id="unanswered-count">0</span></button>
+      <button class="tab" data-tab="candidates">카드 후보 <span class="badge" id="candidates-count">0</span></button>
+    </div>
+
+    <div class="section active" id="sec-hot"></div>
+    <div class="section" id="sec-unanswered"></div>
+    <div class="section" id="sec-candidates"></div>
+
+  </div>
+
+  <div id="error" class="empty" style="display:none;">
+    <h3>데이터 없음</h3>
+    <p>해당 날짜의 다이제스트가 아직 생성되지 않았어요.</p>
+  </div>
+
+</div>
+
+<script>
+const BASE = 'data';
+let dates = [];
+let currentDate = '';
+
+async function init() {
+  try {
+    const res = await fetch(BASE + '/index.json');
+    dates = await res.json();
+    dates.sort().reverse();
+    if (dates.length > 0) {
+      currentDate = dates[0];
+      document.getElementById('date-picker').value = currentDate;
+      await loadDate(currentDate);
+    } else {
+      showError();
+    }
+  } catch(e) {
+    showError();
+  }
+}
+
+async function loadDate(date) {
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('content').style.display = 'none';
+  document.getElementById('error').style.display = 'none';
+  try {
+    const res = await fetch(BASE + '/' + date + '.json');
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    render(data);
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    showError();
+  }
+}
+
+function showError() {
+  document.getElementById('error').style.display = 'block';
+  document.getElementById('content').style.display = 'none';
+}
+
+function render(d) {
+  // Stats
+  const rooms = d.rooms || {};
+  const totalMsgs = Object.values(rooms).reduce((s,r) => s + r.total_msgs, 0);
+  const totalUsers = Object.values(rooms).reduce((s,r) => s + r.active_users, 0);
+  const roomDetails = Object.entries(rooms).map(([n,r]) => n + ' ' + r.total_msgs + '건').join(' / ');
+  document.getElementById('stats-bar').innerHTML =
+    statChip('총 메시지', totalMsgs, roomDetails) +
+    statChip('발화자', totalUsers + '명', Object.entries(rooms).map(([n,r]) => n + ' ' + r.active_users + '명').join(' / ')) +
+    statChip('미디어', Object.values(rooms).reduce((s,r) => s + r.media, 0), '이미지/링크/파일');
+
+  // Keywords
+  document.getElementById('keywords-bar').innerHTML = (d.top_keywords || []).map(k => '<span class="kw">' + esc(k) + '</span>').join('');
+
+  // Tabs count
+  document.getElementById('hot-count').textContent = (d.hot_topics || []).length;
+  document.getElementById('unanswered-count').textContent = (d.unanswered || []).length;
+  document.getElementById('candidates-count').textContent = (d.card_candidates || []).length;
+
+  // Hot topics
+  document.getElementById('sec-hot').innerHTML = (d.hot_topics || []).length === 0
+    ? '<div class="empty"><p>핫토픽 없음</p></div>'
+    : (d.hot_topics || []).map(t => hotCard(t)).join('');
+
+  // Unanswered
+  document.getElementById('sec-unanswered').innerHTML = (d.unanswered || []).length === 0
+    ? '<div class="empty"><p>모든 질문에 답변이 달렸어요</p></div>'
+    : (d.unanswered || []).map((u,i) => unansweredCard(u, i+1)).join('');
+
+  // Candidates
+  document.getElementById('sec-candidates').innerHTML = (d.card_candidates || []).length === 0
+    ? '<div class="empty"><p>카드 후보 없음</p></div>'
+    : (d.card_candidates || []).map(c => candidateCard(c)).join('');
+}
+
+function statChip(label, value, sub) {
+  return '<div class="stat-chip"><div class="label">' + label + '</div><div class="value">' + value + '</div><div class="sub">' + esc(sub) + '</div></div>';
+}
+
+function hotCard(t) {
+  return '<div class="card" onclick="toggleDetail(this)"><div class="card-header"><div class="card-rank">#' + t.rank + '</div><div class="card-body"><div class="card-title">' + esc(t.summary) + '</div><div class="card-meta"><span class="room">' + esc(t.room) + '</span><span>' + t.time + '</span><span class="hot">' + t.msg_count + '건 / ' + t.user_count + '명</span><span class="tag-' + (t.qa_flag === 'QA' ? 'qa' : t.qa_flag === 'Q_' ? 'q' : 'none') + '">' + t.qa_flag + '</span></div><div class="tags">' + (t.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+}
+
+function unansweredCard(u, i) {
+  return '<div class="card unanswered-card"><div class="card-header"><div class="card-rank">' + i + '</div><div class="card-body"><div class="card-title">' + esc(u.question_summary) + '</div><div class="card-meta"><span class="room">' + esc(u.room) + '</span><span>' + u.time + '</span></div><div class="tags">' + (u.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+}
+
+function candidateCard(c) {
+  const stars = '★'.repeat(c.rating) + '☆'.repeat(3 - c.rating);
+  const flagClass = c.qa_flag === 'QA' ? 'tag-qa' : c.qa_flag === 'Q_' ? 'tag-q' : 'tag-none';
+  return '<div class="card" onclick="toggleDetail(this)"><div class="card-header"><div class="card-rank">' + c.id + '</div><div class="card-body"><div class="card-title">' + esc(c.summary) + '</div><div class="card-meta"><span class="room">' + esc(c.room) + '</span><span>' + c.time + '</span><span>' + c.msg_count + '건/' + c.user_count + '명</span><span class="' + flagClass + '">' + c.qa_flag + '</span><span class="rating">' + stars + '</span></div><div class="tags">' + (c.keywords || []).map(k => '<span class="tag">' + esc(k) + '</span>').join('') + '</div></div></div></div>';
+}
+
+function toggleDetail(el) {
+  const detail = el.querySelector('.card-detail');
+  if (detail) detail.classList.toggle('open');
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Date navigation
+document.getElementById('date-picker').addEventListener('change', e => {
+  currentDate = e.target.value;
+  loadDate(currentDate);
+});
+document.getElementById('prev-day').addEventListener('click', () => {
+  const d = new Date(currentDate);
+  d.setDate(d.getDate() - 1);
+  currentDate = d.toISOString().slice(0, 10);
+  document.getElementById('date-picker').value = currentDate;
+  loadDate(currentDate);
+});
+document.getElementById('next-day').addEventListener('click', () => {
+  const d = new Date(currentDate);
+  d.setDate(d.getDate() + 1);
+  currentDate = d.toISOString().slice(0, 10);
+  document.getElementById('date-picker').value = currentDate;
+  loadDate(currentDate);
+});
+
+init();
+</script>
+</body>
+</html>
